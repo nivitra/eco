@@ -1,0 +1,145 @@
+name: kulture
+x-app-env: &app-env
+  NODE_ENV: ${NODE_ENV:-production}
+  PUBLIC_URL: ${PUBLIC_URL:?set PUBLIC_URL}
+  DATABASE_URL: ${DATABASE_URL:?run setup.sh}
+  AUTH_DATABASE_URL: ${AUTH_DATABASE_URL:?run setup.sh}
+  BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?run setup.sh}
+  OPS_TOKEN: ${OPS_TOKEN:?run setup.sh}
+  DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+  DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-flash}
+  AI_DAILY_LIMIT: ${AI_DAILY_LIMIT:-20}
+  SONIOX_API_KEY: ${SONIOX_API_KEY:-}
+  SONIOX_MODEL: ${SONIOX_MODEL:-stt-rt-v5}
+  VOICE_DAILY_LIMIT: ${VOICE_DAILY_LIMIT:-20}
+  MAPBOX_PUBLIC_TOKEN: ${MAPBOX_PUBLIC_TOKEN:-}
+  ROUTING_BASE_URL: ${ROUTING_BASE_URL:-}
+  SMTP_URL: ${SMTP_URL:-}
+  EMAIL_FROM: ${EMAIL_FROM:-}
+  DISABLE_SIGNUP: ${DISABLE_SIGNUP:-false}
+  RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-}
+  RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-}
+  RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET:-}
+  RAZORPAY_PLAN_ID: ${RAZORPAY_PLAN_ID:-}
+  PUBLICATION_SIGNING_KEY_ID: ${PUBLICATION_SIGNING_KEY_ID:-}
+  PUBLICATION_TRUSTED_KEYS_JSON: ${PUBLICATION_TRUSTED_KEYS_JSON:-{}}
+  PUBLICATION_REVOKED_KEY_IDS: ${PUBLICATION_REVOKED_KEY_IDS:-}
+  CLAIM_PROOF_RETENTION_DAYS: ${CLAIM_PROOF_RETENTION_DAYS:-180}
+  MEDIA_ROOT: /var/lib/kulture/media
+x-runtime: &runtime
+  build:
+    context: ..
+    dockerfile: platform/Dockerfile
+  image: kulture-platform:local
+  init: true
+  restart: unless-stopped
+  read_only: true
+  tmpfs: ['/tmp:size=32m,noexec,nosuid']
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  logging:
+    driver: json-file
+    options: { max-size: '10m', max-file: '3' }
+services:
+  db:
+    image: postgis/postgis:17-3.5@sha256:01a6a70e41e6c4467c8f55f6063555ed72db2d6662cd0d571040d42eadaeb6f6
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-kulture}
+      POSTGRES_USER: ${POSTGRES_USER:-kulture_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?run setup.sh}
+    volumes: [database:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -h 127.0.0.1 -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [backend]
+    logging:
+      driver: json-file
+      options: { max-size: '10m', max-file: '3' }
+  migrate:
+    <<: *runtime
+    restart: 'no'
+    command: [node, dist/scripts/migrate.js]
+    environment:
+      <<: *app-env
+      ADMIN_DATABASE_URL: ${ADMIN_DATABASE_URL:?run setup.sh}
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?run setup.sh}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD:?run setup.sh}
+      WORKER_DB_PASSWORD: ${WORKER_DB_PASSWORD:?run setup.sh}
+    depends_on: { db: { condition: service_healthy } }
+    networks: [backend]
+    healthcheck: { disable: true }
+  seed:
+    <<: *runtime
+    restart: 'no'
+    command: [node, dist/scripts/run-seed.js]
+    environment:
+      <<: *app-env
+      ADMIN_DATABASE_URL: ${ADMIN_DATABASE_URL:?run setup.sh}
+    depends_on: { migrate: { condition: service_completed_successfully } }
+    networks: [backend]
+    healthcheck: { disable: true }
+  api:
+    <<: *runtime
+    volumes: [media:/var/lib/kulture/media]
+    environment: *app-env
+    depends_on: { seed: { condition: service_completed_successfully } }
+    networks: [backend, edge]
+  worker:
+    <<: *runtime
+    command: [node, dist/src/worker.js]
+    volumes: [caddy_logs:/var/log/caddy:ro, media:/var/lib/kulture/media]
+    environment:
+      <<: *app-env
+      WORKER_DATABASE_URL: ${WORKER_DATABASE_URL:?run setup.sh}
+      CADDY_ACCESS_LOG: /var/log/caddy/discovery.json
+      PUBLICATION_SIGNING_PRIVATE_KEY: ${PUBLICATION_SIGNING_PRIVATE_KEY:-}
+    depends_on: { seed: { condition: service_completed_successfully } }
+    networks: [backend, edge]
+    healthcheck:
+      test: [CMD, node, dist/scripts/worker-health.js]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  domain-authority:
+    <<: *runtime
+    environment:
+      <<: *app-env
+      DOMAIN_AUTHORITY_ONLY: 'true'
+    depends_on: { seed: { condition: service_completed_successfully } }
+    networks: [backend, edge]
+  ops:
+    <<: *runtime
+    volumes: [media:/var/lib/kulture/media]
+    profiles: [ops]
+    restart: 'no'
+    environment:
+      <<: *app-env
+      INTERNAL_API: 'true'
+      WORKER_DATABASE_URL: ${WORKER_DATABASE_URL:?run setup.sh}
+    depends_on: { seed: { condition: service_completed_successfully } }
+    networks: [backend, edge]
+  caddy:
+    image: caddy:2.10-alpine@sha256:4c6e91c6ed0e2fa03efd5b44747b625fec79bc9cd06ac5235a779726618e530d
+    restart: unless-stopped
+    ports: ['80:80', '443:443', '443:443/udp']
+    environment: { DOMAIN: '${DOMAIN:?set DOMAIN}' }
+    volumes:
+      [
+        ./ops/Caddyfile:/etc/caddy/Caddyfile:ro,
+        caddy_data:/data,
+        caddy_config:/config,
+        caddy_logs:/var/log/caddy,
+      ]
+    depends_on:
+      { api: { condition: service_healthy }, domain-authority: { condition: service_healthy } }
+    networks: [edge]
+    logging:
+      driver: json-file
+      options: { max-size: '10m', max-file: '3' }
+volumes: { media: {}, database: {}, caddy_data: {}, caddy_config: {}, caddy_logs: {} }
+networks:
+  backend: { internal: true }
+  edge: {}

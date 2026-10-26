@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "placeID": "ironhill-roastery-jubilee-hills",
+      "expectedName": "Ironhill Roastery — Jubilee Hills",
+      "expectedCategory": "cafes",
+      "officialOrigins": [
+        "https://ironhillcafe.com"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://ironhillcafe.com/contact/",
+          "sourceURL": "https://ironhillcafe.com/contact/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+917993599555",
+          "sourceURL": "https://ironhillcafe.com/contact/",
+          "scope": "venue",
+          "label": "Jubilee Hills contact"
+        }
+      }
+    },
+    {
+      "placeID": "concu-jubilee-hills",
+      "expectedName": "Conçu — Jubilee Hills",
+      "expectedCategory": "cafes",
+      "officialOrigins": [
+        "https://www.concu.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://www.concu.in/location/488316689",
+          "sourceURL": "https://www.concu.in/location/488316689",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+919985800031",
+          "sourceURL": "https://www.concu.in/location/488316689",
+          "scope": "venue",
+          "label": "Jubilee Hills contact"
+        },
+        "hours": {
+          "text": "Monday–Sunday, 11:00 AM–midnight.",
+          "sourceURL": "https://www.concu.in/location/488316689"
+        }
+      }
+    },
+    {
+      "placeID": "roast-ccx-banjara-hills",
+      "expectedName": "Roast CCx",
+      "expectedCategory": "cafes",
+      "officialOrigins": [
+        "https://www.roastcafe.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://www.roastcafe.in/location/879131221",
+          "sourceURL": "https://www.roastcafe.in/location/879131221",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+919133301861",
+          "sourceURL": "https://www.roastcafe.in/location/879131221",
+          "scope": "venue",
+          "label": "Roast CCx contact"
+        },
+        "hours": {
+          "text": "Monday–Sunday, 7:00 AM–1:00 AM the following day.",
+          "sourceURL": "https://www.roastcafe.in/location/879131221"
+        }
+      }
+    },
+    {
+      "placeID": "salar-jung-museum",
+      "expectedName": "Salar Jung Museum",
+      "expectedCategory": "art",
+      "officialOrigins": [
+        "https://salarjungmuseum.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://salarjungmuseum.in/",
+          "sourceURL": "https://salarjungmuseum.in/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+918074071951",
+          "sourceURL": "https://salarjungmuseum.in/",
+          "scope": "venue",
+          "label": "Museum contact"
+        },
+        "hours": {
+          "text": "10:00 AM–6:00 PM; closed Fridays. Last entry 5:15 PM.",
+          "sourceURL": "https://salarjungmuseum.in/"
+        }
+      }
+    },
+    {
+      "placeID": "shilparamam-madhapur",
+      "expectedName": "Shilparamam — Madhapur",
+      "expectedCategory": "art",
+      "officialOrigins": [
+        "https://shilparamam.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://shilparamam.in/contact-us/",
+          "sourceURL": "https://shilparamam.in/contact-us/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+918886652009",
+          "sourceURL": "https://shilparamam.in/contact-us/",
+          "scope": "venue",
+          "label": "Madhapur venue office"
+        },
+        "hours": {
+          "text": "Published visiting hours: 10:30 AM–8:00 PM. Days are not stated.",
+          "sourceURL": "https://shilparamam.in/contact-us/"
+        }
+      }
+    },
+    {
+      "placeID": "kitsons-kokapet",
+      "expectedName": "KITSONS — Kokapet",
+      "expectedCategory": "stationery",
+      "officialOrigins": [
+        "https://kitsons.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://kitsons.in/contact-us/",
+          "sourceURL": "https://kitsons.in/contact-us/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+917337555689",
+          "sourceURL": "https://kitsons.in/contact-us/",
+          "scope": "venue",
+          "label": "Kokapet branch contact"
+        }
+      }
+    },
+    {
+      "placeID": "kitsons-golden-mile-road",
+      "expectedName": "KITSONS — Golden Mile Road",
+      "expectedCategory": "stationery",
+      "officialOrigins": [
+        "https://kitsons.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://kitsons.in/contact-us/",
+          "sourceURL": "https://kitsons.in/contact-us/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+917995035689",
+          "sourceURL": "https://kitsons.in/contact-us/",
+          "scope": "venue",
+          "label": "Golden Mile Road branch contact"
+        }
+      }
+    },
+    {
+      "placeID": "medicover-financial-district",
+      "expectedName": "Medicover Hospitals — Financial District",
+      "expectedCategory": "healthcare",
+      "officialOrigins": [
+        "https://www.medicoverhospitals.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://www.medicoverhospitals.in/hospitals/telangana/kokapet-financial-district/",
+          "sourceURL": "https://www.medicoverhospitals.in/hospitals/telangana/kokapet-financial-district/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+914068334455",
+          "sourceURL": "https://www.medicoverhospitals.in/hospitals/telangana/kokapet-financial-district/",
+          "scope": "central",
+          "label": "Central appointment enquiries"
+        }
+      }
+    },
+    {
+      "placeID": "curo-clinics-kokapet",
+      "expectedName": "Curo Clinics — Kokapet",
+      "expectedCategory": "healthcare",
+      "officialOrigins": [
+        "https://curoclinics.com"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://curoclinics.com/contact-us/",
+          "sourceURL": "https://curoclinics.com/contact-us/",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+918919942870",
+          "sourceURL": "https://curoclinics.com/contact-us/",
+          "scope": "venue",
+          "label": "Kokapet clinic contact"
+        },
+        "hours": {
+          "text": "Monday–Friday, 10:00 AM–9:00 PM; Saturday, 9:00 AM–9:00 PM; Sunday, 9:00 AM–4:00 PM.",
+          "sourceURL": "https://curoclinics.com/contact-us/"
+        }
+      }
+    },
+    {
+      "placeID": "wikidata-q3493970",
+      "expectedName": "Nehru Zoological Park",
+      "expectedCategory": "parks",
+      "officialOrigins": [
+        "https://nzptsfd.telangana.gov.in"
+      ],
+      "contactDetails": {
+        "schemaVersion": 1,
+        "checkedAt": "2026-10-10T12:35:38Z",
+        "authority": "official_website",
+        "website": {
+          "url": "https://nzptsfd.telangana.gov.in/home.do",
+          "sourceURL": "https://nzptsfd.telangana.gov.in/home.do",
+          "scope": "venue"
+        },
+        "phone": {
+          "number": "+914024477355",
+          "sourceURL": "https://nzptsfd.telangana.gov.in/home.do",
+          "scope": "venue",
+          "label": "Zoo general enquiries"
+        }
+      }
+    }
+  ]
+}

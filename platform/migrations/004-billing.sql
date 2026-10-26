@@ -1,0 +1,11 @@
+CREATE TABLE subscriptions(id uuid PRIMARY KEY DEFAULT gen_random_uuid(),tenant_id uuid NOT NULL REFERENCES tenants,place_id text NOT NULL REFERENCES places,provider_id text UNIQUE,status text NOT NULL DEFAULT 'creating',checkout_url text,paid_until timestamptz,cancel_at_period_end boolean NOT NULL DEFAULT false,created_at timestamptz NOT NULL DEFAULT now(),updated_at timestamptz NOT NULL DEFAULT now(),UNIQUE(tenant_id,place_id));
+ALTER TABLE subscriptions ENABLE ROW LEVEL SECURITY; ALTER TABLE subscriptions FORCE ROW LEVEL SECURITY;
+CREATE POLICY subscription_read ON subscriptions FOR SELECT USING(can_access_tenant(tenant_id));
+CREATE POLICY subscription_write ON subscriptions FOR INSERT WITH CHECK(is_tenant_owner(tenant_id));
+CREATE POLICY subscription_update ON subscriptions FOR UPDATE USING(is_tenant_owner(tenant_id)) WITH CHECK(is_tenant_owner(tenant_id));
+CREATE TABLE billing_inbox(event_id text PRIMARY KEY,payload jsonb NOT NULL,payload_hash text NOT NULL,status text NOT NULL DEFAULT 'pending',attempts int NOT NULL DEFAULT 0,available_at timestamptz NOT NULL DEFAULT now(),error_code text,created_at timestamptz NOT NULL DEFAULT now());
+ALTER TABLE billing_inbox ENABLE ROW LEVEL SECURITY; ALTER TABLE billing_inbox FORCE ROW LEVEL SECURITY;
+CREATE TABLE payment_ledger(payment_id text PRIMARY KEY,subscription_id uuid NOT NULL REFERENCES subscriptions,amount_minor int NOT NULL,currency text NOT NULL,paid_until timestamptz NOT NULL,recorded_at timestamptz NOT NULL DEFAULT now());
+ALTER TABLE payment_ledger ENABLE ROW LEVEL SECURITY; ALTER TABLE payment_ledger FORCE ROW LEVEL SECURITY;
+CREATE POLICY payment_read ON payment_ledger FOR SELECT USING(EXISTS(SELECT 1 FROM subscriptions s WHERE s.id=subscription_id AND can_access_tenant(s.tenant_id)));
+CREATE FUNCTION enqueue_billing(eid text,body jsonb,digest text) RETURNS text LANGUAGE plpgsql SECURITY DEFINER SET search_path=public,pg_temp AS $$ DECLARE prior text; BEGIN INSERT INTO billing_inbox(event_id,payload,payload_hash) VALUES(eid,body,digest) ON CONFLICT DO NOTHING; SELECT payload_hash INTO prior FROM billing_inbox WHERE event_id=eid; IF prior<>digest THEN RETURN 'conflict'; END IF; RETURN 'accepted'; END $$;

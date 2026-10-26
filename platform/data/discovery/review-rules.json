@@ -1,0 +1,331 @@
+{
+  "reviewedAt": "2026-10-01",
+  "exclude": {
+    "osm-node-11018919100": "Source address says Saroornagar/Saidabad but feature point is in Kokapet rectangle; conflicting locality, withheld.",
+    "osm-node-7025820786": "Source address says Shapur Nagar/Jeedimetla but feature point is in Jubilee rectangle; conflicting locality, withheld.",
+    "osm-node-11005951281": "Khairatabad named facility is pinned in Jubilee rectangle; locality conflict pending independent review.",
+    "osm-node-11005968513": "Ameerpet/Balkampet named facility is pinned in Jubilee rectangle; locality conflict pending independent review.",
+    "osm-node-11005968512": "Jawhar Nagar/Balaji Nagar governmental record has ambiguous locality; withheld until branch verification.",
+    "osm-node-7025820863": "Name is 7Ten Spa but OSM category is cafe; conflicting type, withheld.",
+    "osm-node-6840941123": "B. DUBS mapped as cafe; ambiguous restaurant/bar classification, withheld.",
+    "osm-node-7025820758": "Generic Pharmacist name without branch identity; withheld for review.",
+    "osm-node-4422254585": "Generic Blood Bank name without facility identity; withheld for review.",
+    "osm-node-8909248554": "School ground lacks confirmed general public access; not presented as a public park.",
+    "osm-way-740791127": "Football coaching grounds lack confirmed general public access; not presented as public park.",
+    "osm-way-1222793133": "High Fields residential garden: public access not established; withheld.",
+    "osm-way-1222890642": "High Fields residential garden: public access not established; withheld.",
+    "osm-way-1222890659": "High Fields residential garden: public access not established; withheld.",
+    "osm-node-827576106": "Health trust office is not independently confirmed as a patient-facing facility; withheld."
+  },
+  "patches": {
+    "osm-node-6656722815": {
+      "neighborhood": "Narsingi · outside Kokapet",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6656722815"
+    },
+    "osm-way-254295845": {
+      "neighborhood": "Nanakramguda · outside Kokapet",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/254295845"
+    },
+    "osm-node-349267517": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/349267517"
+    },
+    "osm-node-6471883031": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6471883031"
+    },
+    "osm-node-6482049740": {
+      "neighborhood": "Yousufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6482049740"
+    },
+    "osm-node-6484730153": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6484730153"
+    },
+    "osm-node-6485134606": {
+      "neighborhood": "Yousufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6485134606"
+    },
+    "osm-node-6485848266": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6485848266"
+    },
+    "osm-node-6487866891": {
+      "neighborhood": "Yousufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6487866891"
+    },
+    "osm-node-6549366073": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6549366073"
+    },
+    "osm-node-6559338844": {
+      "neighborhood": "Yousufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6559338844"
+    },
+    "osm-node-6811749007": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6811749007"
+    },
+    "osm-node-6811749119": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6811749119"
+    },
+    "osm-node-6811749136": {
+      "neighborhood": "Yousufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/6811749136"
+    },
+    "osm-node-7248877409": {
+      "neighborhood": "Shaikpet · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/7248877409"
+    },
+    "osm-node-8751713608": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/8751713608"
+    },
+    "osm-node-8759319675": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/8759319675"
+    },
+    "osm-node-10989320886": {
+      "neighborhood": "Shaikpet · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/10989320886"
+    },
+    "osm-node-11021349280": {
+      "neighborhood": "Raidarga · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/11021349280"
+    },
+    "osm-node-11021399428": {
+      "neighborhood": "Shaikpet · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/11021399428"
+    },
+    "osm-node-14184640651": {
+      "neighborhood": "Rai Durg · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/node/14184640651"
+    },
+    "osm-way-356261668": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/356261668"
+    },
+    "osm-way-356271386": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/356271386"
+    },
+    "osm-way-360462644": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/360462644"
+    },
+    "osm-way-515411914": {
+      "neighborhood": "yusufguda · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/515411914"
+    },
+    "osm-way-660771331": {
+      "neighborhood": "Banjara Hills · outside Jubilee Hills",
+      "reason": "The OSM address explicitly names this neighboring locality; bounding-box membership is not a neighborhood boundary.",
+      "sourceURL": "https://www.openstreetmap.org/way/660771331"
+    },
+    "osm-way-626348183": {
+      "neighborhood": "Gandipet · outside Kokapet",
+      "reason": "The mapped feature name identifies the neighboring locality, so it is not labelled as the requested neighborhood core.",
+      "sourceURL": "https://www.openstreetmap.org/way/626348183"
+    },
+    "osm-way-661188648": {
+      "neighborhood": "Khajaguda · outside Kokapet",
+      "reason": "The mapped feature name identifies the neighboring locality, so it is not labelled as the requested neighborhood core.",
+      "sourceURL": "https://www.openstreetmap.org/way/661188648"
+    },
+    "osm-way-165302486": {
+      "neighborhood": "Madhapur · outside Jubilee Hills",
+      "reason": "The mapped feature name identifies the neighboring locality, so it is not labelled as the requested neighborhood core.",
+      "sourceURL": "https://www.openstreetmap.org/way/165302486"
+    },
+    "osm-way-860344899": {
+      "name": "Apollo Hospitals — Jubilee Hills",
+      "address": "Road No.72, opposite Bharatiya Vidya Bhavan School, Film Nagar, Jubilee Hills, Hyderabad, Telangana 500033",
+      "neighborhood": "Jubilee Hills / Film Nagar",
+      "summary": "The official Apollo branch page identifies its Jubilee Hills hospital at Road No.72. Current appointments, emergency capacity and clinical quality are not independently verified by this directory.",
+      "sourceURL": "https://www.apollohospitals.com/hospitals/apollo-health-city-jubilee-hills",
+      "reason": "Official branch page provides this exact hospital name and address; OSM supplies the feature point, not an entrance."
+    }
+  },
+  "additions": [
+    {
+      "id": "kitsons-kokapet",
+      "name": "KITSONS — Kokapet",
+      "category": "stationery",
+      "neighborhood": "Kokapet / Gandipet",
+      "address": "1st Floor, above Vijetha Supermarket, Gandipet Main Road, Kokapet/Gandipet 500075",
+      "summary": "The official store locator lists this Kokapet branch. KITSONS sells stationery, books, toys and art-and-craft supplies.",
+      "tags": [
+        "Stationery",
+        "Books",
+        "Art supplies"
+      ],
+      "sourceURLs": [
+        "https://kitsons.in/contact-us/",
+        "https://kitsons.in/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "KITSONS — Kokapet 1st Floor, above Vijetha Supermarket, Gandipet Main Road, Kokapet/Gandipet 500075",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official pages opened and branch facts manually reviewed; no business media reuse licence inferred.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false
+      }
+    },
+    {
+      "id": "kitsons-golden-mile-road",
+      "name": "KITSONS — Golden Mile Road",
+      "category": "stationery",
+      "neighborhood": "Kokapet / Golden Mile Road",
+      "address": "208, 2nd Floor, Golden Kay Square, Golden Mile Road, opposite Rajapushpa Atria, Hyderabad 500075",
+      "summary": "The official locator lists this Golden Mile Road branch of the stationery, books and art-supply retailer.",
+      "tags": [
+        "Stationery",
+        "Books",
+        "Art supplies"
+      ],
+      "sourceURLs": [
+        "https://kitsons.in/contact-us/",
+        "https://kitsons.in/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "KITSONS — Golden Mile Road 208, 2nd Floor, Golden Kay Square, Golden Mile Road, opposite Rajapushpa Atria, Hyderabad 500075",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official pages opened and branch facts manually reviewed; no business media reuse licence inferred.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false
+      }
+    },
+    {
+      "id": "epistles-jubilee-hills",
+      "name": "Epistles",
+      "category": "community",
+      "neighborhood": "Jubilee Hills",
+      "address": "H.No.8-2-293/82/A/31, 3rd floor, Plot 31, Road No.5, Jubilee Hills, Hyderabad 500033",
+      "summary": "A Christian bookstore and library with a reading room, coffee corner and small event hall described on its official site. Confirm event access and current hours with the venue.",
+      "tags": [
+        "Library",
+        "Books",
+        "Reading",
+        "Community hall"
+      ],
+      "sourceURLs": [
+        "https://epistles.in/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "Epistles H.No.8-2-293/82/A/31, 3rd floor, Plot 31, Road No.5, Jubilee Hills, Hyderabad 500033",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official pages opened and branch facts manually reviewed; no business media reuse licence inferred.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false
+      }
+    },
+    {
+      "id": "medicover-financial-district",
+      "name": "Medicover Hospitals — Financial District",
+      "category": "healthcare",
+      "neighborhood": "Nanakramguda / Financial District · outside Kokapet",
+      "address": "Myscape Road, beside The District Building, Financial District, Nanakramguda, Hyderabad 500032",
+      "summary": "The official branch page identifies this Financial District hospital near Kokapet. This directory does not verify appointment availability, emergency capacity or clinical quality.",
+      "tags": [
+        "Hospital",
+        "Official branch source"
+      ],
+      "sourceURLs": [
+        "https://www.medicoverhospitals.in/hospitals/telangana/kokapet-financial-district/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "Medicover Hospitals — Financial District Myscape Road, beside The District Building, Financial District, Nanakramguda, Hyderabad 500032",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official pages opened and branch facts manually reviewed; no business media reuse licence inferred.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false
+      }
+    },
+    {
+      "id": "unicare-global-hospitals-kokapet",
+      "name": "UniCare Hospitals — Kokapet",
+      "category": "healthcare",
+      "neighborhood": "Kokapet",
+      "address": "A 201, 2nd Floor, Saanvi Antalya Homes, adjacent to Allu Cinemas, Kokapet, Hyderabad, Telangana",
+      "summary": "The official website identifies this hospital in Kokapet and publishes its contact address. Confirm current appointments and services directly; clinical quality and availability are not independently verified.",
+      "tags": [
+        "Hospital",
+        "Official branch source"
+      ],
+      "sourceURLs": [
+        "https://unicareglobalhospitals.com/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "UniCare Hospitals — Kokapet Hyderabad",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official contact-page text and its public rendering asset fetched with robots check; address manually reviewed. Not an independent operation or clinical verification.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false,
+        "renderingAssetURL": "https://unicareglobalhospitals.com/assets/index-BukPoDRS.js",
+        "renderingAssetSHA256": "876a4fc2ec625297fbf0543396329944388d30b14fb5c79aeeb0466573d54dbf"
+      }
+    },
+    {
+      "id": "curo-clinics-kokapet",
+      "name": "Curo Clinics — Kokapet",
+      "category": "healthcare",
+      "neighborhood": "Kokapet X Road / Narsingi–Gandipet border",
+      "address": "2nd Floor, Kokapet One Mall, 210–211, Kokapet X Road, Narsingi, Gandipet, Hyderabad, Telangana 500075",
+      "summary": "The official site identifies Curo Clinics as a multispeciality clinic in Kokapet. Confirm appointment details and current services directly; no clinical quality or availability is independently verified.",
+      "tags": [
+        "Clinic",
+        "Official branch source"
+      ],
+      "sourceURLs": [
+        "https://curoclinics.com/contact-us/"
+      ],
+      "researchedAt": "2026-10-01",
+      "searchQuery": "Curo Clinics — Kokapet Hyderabad",
+      "discoveryProvenance": {
+        "source": "official-business-website",
+        "retrievedAt": "2026-10-01",
+        "method": "Official contact-page text and its public rendering asset fetched with robots check; address manually reviewed. Not an independent operation or clinical verification.",
+        "boundaryVerified": false,
+        "currentOperationVerified": false,
+        "renderingAssetURL": "https://curoclinics.com/assets/index-9pWYtsqk.js",
+        "renderingAssetSHA256": "5e0782d94cd5102910ab9b9e306d7c758d291511fb33be2bc63511c5fb3e6ac8"
+      }
+    }
+  ]
+}

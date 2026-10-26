@@ -1,0 +1,1105 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Unverified fieldwork queue, not a completed survey or route-quality claim. Catalogue coordinates are hints, not entrance ground truth.",
+  "cases": [
+    {
+      "caseID": "HYD-001",
+      "placeID": "concu-jubilee-hills",
+      "name": "Conçu — Jubilee Hills",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road Number 37, CBI Colony, Jubilee Hills, Hyderabad, Telangana, India",
+      "searchInput": "Concu Road 37 CBI Colony Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.concu.in/location/488316689"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-002",
+      "placeID": "kissa-coffee-house-jubilee-hills",
+      "name": "Kissa Coffee House",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "House 347, Road No. 22, Jubilee Hills, Hyderabad, Telangana 500033",
+      "searchInput": "Kissa Coffee House Road 22 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.kissacoffeehouse.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-003",
+      "placeID": "blue-tokai-origins-jubilee-hills",
+      "name": "Blue Tokai Origins — Jubilee Hills",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "H No. 8/2/293/82/A/710/B, Road No. 36, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Blue Tokai Coffee Roasters Origins Road 36 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-origins-jubilee-hills-cafe-jubilee-hills-hyderabad-525533/Home/",
+        "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-004",
+      "placeID": "starbucks-alcazar-jubilee-hills",
+      "name": "Starbucks — Alcazar",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plots 498 & 497, Ground and First Floor, Alcazar Building, Survey 102/1, Road No. 9, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Starbucks Alcazar Road 9 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://stores.starbucks.in/store-pages/starbucks-hyderabad-5/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-005",
+      "placeID": "ironhill-roastery-jubilee-hills",
+      "name": "Ironhill Roastery — Jubilee Hills",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 729, Road No. 36, Jubilee Hills, Hyderabad",
+      "searchInput": "Ironhill Roastery Plot 729 Road 36 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://ironhillcafe.com/contact/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-006",
+      "placeID": "srishti-art-gallery-jubilee-hills",
+      "name": "Srishti Art Gallery",
+      "category": "art",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 267, Road No. 15, near Road No. 10, Jubilee Hills, Hyderabad",
+      "searchInput": "Srishti Art Gallery Plot 267 Road 15 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.srishti.art/contact/",
+        "https://www.artmumbai.com/exhibitor/srishti-art-gallery-70"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-007",
+      "placeID": "peddamma-thalli-temple-jubilee-hills",
+      "name": "Peddamma Thalli Temple",
+      "category": "heritage",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road No. 55, Jubilee Hills, Hyderabad, Telangana",
+      "searchInput": "Peddamma Thalli Temple Road 55 Jubilee Hills Hyderabad India",
+      "cataloguePoint": {
+        "latitude": 17.430646,
+        "longitude": 78.40499
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://hyderabad.telangana.gov.in/peddamma-temple/",
+        "https://www.wikidata.org/wiki/Q7159040"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-008",
+      "placeID": "kbr-national-park",
+      "name": "KBR National Park",
+      "category": "nature",
+      "catalogueNeighbourhood": "Jubilee Hills / Banjara Hills edge",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Kasu Brahmananda Reddy National Park, Jubilee Hills–Banjara Hills area, Hyderabad, Telangana",
+      "searchInput": "KBR National Park Jubilee Hills Hyderabad India",
+      "cataloguePoint": {
+        "latitude": 17.42,
+        "longitude": 78.41
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.incredibleindia.gov.in/en/telangana/hyderabad/kbr-national-park",
+        "https://forests.telangana.gov.in/Documents/AAR/AAR5-6.pdf",
+        "https://www.wikidata.org/wiki/Q969593"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-009",
+      "placeID": "cafe-dori-jubilee-hills",
+      "name": "Cafe Dori — Jubilee Hills",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road No. 10C, Venkatagiri, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Cafe Dori Road 10C Venkatagiri Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.nappadori.com/pages/store",
+        "https://www.nappadori.com/pages/cafe-dori"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-010",
+      "placeID": "grano-jubilee-hills",
+      "name": "GRANO Coffee",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Roads 63A and 64, Circle 18, Jubilee Hills, Hyderabad",
+      "searchInput": "Grano Coffee Road 63A Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://granocoffee.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-011",
+      "placeID": "ohana-jubilee-hills",
+      "name": "Cafe Ohana",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "B70, Journalist Colony, Jubilee Hills, Hyderabad",
+      "searchInput": "Cafe Ohana B70 Journalist Colony Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://cafeohana.co.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-012",
+      "placeID": "karafa-jubilee-hills",
+      "name": "Karafa — Jubilee Hills",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 1182, Cable Bridge Road, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Karafa Plot 1182 Cable Bridge Road Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://karafa.com/contact-us/",
+        "https://karafa.com/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-013",
+      "placeID": "prost-jubilee-hills",
+      "name": "Prost Brewpub — Jubilee Hills",
+      "category": "nightlife",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 1026, Road No. 45, beside Quadro Living, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Prost Brewpub Plot 1026 Road 45 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://prost.in/locations.html"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-014",
+      "placeID": "le-vantage-cafe-bar-jubilee-hills",
+      "name": "Lé Vantage Café Bar",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "197 / 197-A, Road No. 13, Jubilee Hills, Hyderabad",
+      "searchInput": "Le Vantage Cafe Bar 197 Road 13 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://levantagecafebar.weebly.com/",
+        "https://www.zomato.com/hyderabad/l%C3%A9-vantage-cafe-bar-jubilee-hills/book"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-015",
+      "placeID": "bel-posto-the-cafe-jubilee-hills",
+      "name": "Bel Posto The Cafe",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road Number 44, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
+      "searchInput": "Bel Posto The Cafe Road 44 CBI Colony Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.swiggy.com/restaurants/hyderabad/jubilee-hills/bel-posto-the-cafe-381278/dineout",
+        "https://www.zomato.com/hi-en/hyderabad/bel-posto-the-cafe-1-jubilee-hills/book"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-016",
+      "placeID": "kortyard-cafe-jubilee-hills",
+      "name": "Kortyard Cafe",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 369, House No. 8-2-293/82/369/1, Phase III, Road Number 82, Jubilee Hills, Hyderabad, Telangana 500096",
+      "searchInput": "Kortyard Cafe Plot 369 Road 82 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.swiggy.com/restaurants/hyderabad/jubilee-hills/kortyard-cafe-719891/dineout",
+        "https://www.swiggy.com/restaurants/kortyard-cafe-jubilee-hills-hyderabad-719891/dineout"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-017",
+      "placeID": "good-times-deck-urban-nemo-jubilee-hills",
+      "name": "Good Times Deck by Urban Nemo",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "104, Park View Enclave, Jubilee Hills, Hyderabad",
+      "searchInput": "Good Times Deck by Urban Nemo 104 Park View Enclave Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.venuelook.com/hyderabad/good-times-deck-by-urban-nemo-in-jubilee-hills",
+        "https://www.venuebookingz.com/hyderabad/jubilee-hills/banquet-hall/urban-nemo-cafe-in-garden/36175"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-018",
+      "placeID": "antera-kitchen-bar-jubilee-hills",
+      "name": "Antera Kitchen & Bar — Jubilee Hills",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road No. 10, Jubilee Hills, Hyderabad 500033; brand site lists Plot 265/A",
+      "searchInput": "Antera Kitchen Bar Road 10 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.anterakitchenandbar.com/",
+        "https://www.swiggy.com/city/hyderabad/antera-kitchen-and-bar-roadno10-jubilee-hills-rest459237"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-019",
+      "placeID": "forefathers-jubilee-hills",
+      "name": "Forefathers",
+      "category": "nightlife",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "872, CBI Colony, Masthan Nagar, Road No. 45, Jubilee Hills, Hyderabad",
+      "searchInput": "Forefathers 872 Road 45 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.district.in/dining/hyderabad/forefathers-jubilee-hills",
+        "https://ek-mag.com/forefathers-restaurant-and-bar/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-020",
+      "placeID": "telugu-medium-kitchen-jubilee-hills",
+      "name": "Telugu Medium Kitchen & Bar",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 1062, Nandagiri Hills, Road No. 46, Jubilee Hills, Hyderabad",
+      "searchInput": "Telugu Medium Kitchen Bar Plot 1062 Road 46 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.district.in/dining/hyderabad/telugu-medium-kitchen-bar-jubilee-hills",
+        "https://www.wallpaper.com/travel/restaurants/telugu-medium-southern-india-sona-reddy-studio",
+        "https://www.zomato.com/ta/hyderabad/telugu-medium-kitchen-bar-jubilee-hills/photos"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-021",
+      "placeID": "zythum-brewing-jubilee-hills",
+      "name": "Zythum Brewing Co.",
+      "category": "nightlife",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "74A, Park View Enclave, Check Post Road, Jubilee Hills, Hyderabad",
+      "searchInput": "Zythum Brewing Co 74A Park View Enclave Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.district.in/dining/hyderabad/zythum-brewing-co-jubilee-hills",
+        "https://www.swiggy.com/city/hyderabad/zythum-brewing-co-jubilee-hills-rest788671",
+        "https://www.zomato.com/hyderabad/zythum-brewing-co-jubilee-hills/photos",
+        "https://www.venuelook.com/hyderabad/38623-zythum-brewing-co-in-jubilee-hills/photos"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-022",
+      "placeID": "sakura-far-eastern-kitchen-jubilee-hills",
+      "name": "Sakura — A Far Eastern Kitchen",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "1259/A, 4th Floor, Jahnavi Trade Centre, Road No. 36, near Metro Pillar 1621, Jubilee Hills, Hyderabad",
+      "searchInput": "Sakura A Far Eastern Kitchen Jahnavi Trade Centre Road 36 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.swiggy.com/city/hyderabad/sakura-a-far-eastern-kitchen-jahnavi-trade-centre-jubilee-hills-rest880295",
+        "https://www.district.in/dining/hyderabad/sakura-a-far-eastern-kitchen-1-jubilee-hills",
+        "https://www.venuelook.com/hyderabad/38635-sakura-a-far-eastern-kitchen-in-jubilee-hills/photos"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-023",
+      "placeID": "jathara-restaurant-jubilee-hills",
+      "name": "Jathara Restaurant",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "245, 4th Floor, Apurupa Towers, House No. 8-2-293/82/A, Jubilee Hills, Hyderabad",
+      "searchInput": "Jathara Restaurant Apurupa Towers Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.indulgexpress.com/food/food-hyderabad/2023/Dec/07/jathara-restaurant-endeavours-to-unite-food-enthusiasts-through-its-offering-of-telugu-cuisine-55778.html",
+        "https://www.justdial.com/Hyderabad/Jathara-Restaurant-Jubilee-Hills/040PXX40-XX40-231221140024-I8J3_BZDET/reviews"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-024",
+      "placeID": "ukusa-jubilee-hills",
+      "name": "Ukusa",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 130, 8/2/293/82, A/130, Road No. 10, Jubilee Hills, Hyderabad",
+      "searchInput": "Ukusa Plot 130 Road 10 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.district.in/dining/hyderabad/ukusa-jubilee-hills",
+        "https://www.indulgexpress.com/food/food-hyderabad/2023/Jun/02/blissful-bites-49602.html"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-025",
+      "placeID": "aidu-kitchen-jubilee-hills",
+      "name": "Aidu South Indian Kitchen & Bar",
+      "category": "food",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 1057/G, near SBI Bank, Cable Bridge Road, Nandagiri Hills, Jubilee Hills, Hyderabad",
+      "searchInput": "Aidu Kitchen Plot 1057 G Cable Bridge Road Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.district.in/dining/hyderabad/aidu-kitchen-jubilee-hills",
+        "https://www.zomato.com/hyderabad/aidu-kitchen-jubilee-hills"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-026",
+      "placeID": "tiger-lily-bistro-jubilee-hills",
+      "name": "Tiger Lily Cafe & Bistro",
+      "category": "cafes",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Plot 272, Venkatagiri, Jubilee Hills, Hyderabad 500033; road number differs across listings",
+      "searchInput": "Tiger Lily Cafe Bistro Plot 272 Venkatagiri Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.swiggy.com/restaurants/hyderabad/jubilee-hills/tiger-lily-bistro-284683/dineout",
+        "https://www.tripadvisor.in/Restaurant_Review-g297586-d20329020-Reviews-Tiger_Lily_Cafe_And_Bistro-Hyderabad_Hyderabad_District_Telangana.html"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-027",
+      "placeID": "nappa-dori-jubilee-hills",
+      "name": "Nappa Dori — Hyderabad",
+      "category": "shopping",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Road No. 10C, Venkatagiri, Jubilee Hills, Hyderabad",
+      "searchInput": "Nappa Dori Road 10C Venkatagiri Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://www.nappadori.com/pages/store"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-028",
+      "placeID": "meghavi-daspalla-jubilee-hills",
+      "name": "Meghavi Wellness — Hotel Daspalla",
+      "category": "wellness",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "Hotel Daspalla, Road Number 37, CBI Colony, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Meghavi Wellness Spa Hotel Daspalla Road 37 Jubilee Hills Hyderabad India",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://meghaviwellness.com/contact-us/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-029",
+      "placeID": "kitsons-kokapet",
+      "name": "KITSONS — Kokapet",
+      "category": "stationery",
+      "catalogueNeighbourhood": "Kokapet / Gandipet",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "1st Floor, above Vijetha Supermarket, Gandipet Main Road, Kokapet/Gandipet 500075",
+      "searchInput": "KITSONS — Kokapet 1st Floor, above Vijetha Supermarket, Gandipet Main Road, Kokapet/Gandipet 500075",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://kitsons.in/contact-us/",
+        "https://kitsons.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-030",
+      "placeID": "kitsons-golden-mile-road",
+      "name": "KITSONS — Golden Mile Road",
+      "category": "stationery",
+      "catalogueNeighbourhood": "Kokapet / Golden Mile Road",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "208, 2nd Floor, Golden Kay Square, Golden Mile Road, opposite Rajapushpa Atria, Hyderabad 500075",
+      "searchInput": "KITSONS — Golden Mile Road 208, 2nd Floor, Golden Kay Square, Golden Mile Road, opposite Rajapushpa Atria, Hyderabad 500075",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://kitsons.in/contact-us/",
+        "https://kitsons.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-031",
+      "placeID": "epistles-jubilee-hills",
+      "name": "Epistles",
+      "category": "community",
+      "catalogueNeighbourhood": "Jubilee Hills",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "H.No.8-2-293/82/A/31, 3rd floor, Plot 31, Road No.5, Jubilee Hills, Hyderabad 500033",
+      "searchInput": "Epistles H.No.8-2-293/82/A/31, 3rd floor, Plot 31, Road No.5, Jubilee Hills, Hyderabad 500033",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://epistles.in/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-032",
+      "placeID": "unicare-global-hospitals-kokapet",
+      "name": "UniCare Hospitals — Kokapet",
+      "category": "healthcare",
+      "catalogueNeighbourhood": "Kokapet",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "A 201, 2nd Floor, Saanvi Antalya Homes, adjacent to Allu Cinemas, Kokapet, Hyderabad, Telangana",
+      "searchInput": "UniCare Hospitals — Kokapet Hyderabad",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://unicareglobalhospitals.com/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-033",
+      "placeID": "curo-clinics-kokapet",
+      "name": "Curo Clinics — Kokapet",
+      "category": "healthcare",
+      "catalogueNeighbourhood": "Kokapet X Road / Narsingi–Gandipet border",
+      "scope": "core Jubilee Hills / Kokapet",
+      "address": "2nd Floor, Kokapet One Mall, 210–211, Kokapet X Road, Narsingi, Gandipet, Hyderabad, Telangana 500075",
+      "searchInput": "Curo Clinics — Kokapet Hyderabad",
+      "cataloguePoint": null,
+      "coordinateSource": null,
+      "sourceURLs": [
+        "https://curoclinics.com/contact-us/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "core"
+    },
+    {
+      "caseID": "HYD-034",
+      "placeID": "wikidata-q84028775",
+      "name": "Peddamma Gudi metro station",
+      "category": "transport",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — exact entrance not verified",
+      "searchInput": "Peddamma Gudi metro station Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.430583333333335,
+        "longitude": 78.40855555555555
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q84028775",
+        "https://ltmetro.com/wp-content/uploads/2025/01/HMRRouteMap_new.pdf"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-035",
+      "placeID": "wikidata-q83637027",
+      "name": "Madhapur metro station",
+      "category": "transport",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — exact entrance not verified",
+      "searchInput": "Madhapur metro station Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.437244444444445,
+        "longitude": 78.40048333333333
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q83637027",
+        "https://ltmetro.com/wp-content/uploads/2025/01/HMRRouteMap_new.pdf"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-036",
+      "placeID": "wikidata-q135913044",
+      "name": "Nalla Cheruvu",
+      "category": "nature",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — street address not verified",
+      "searchInput": "Nalla Cheruvu Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.396362285075753,
+        "longitude": 78.34561944007875
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q135913044"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-037",
+      "placeID": "wikidata-q140782610",
+      "name": "Healing Hands Clinic - Jubilee Hills, Hyderabad",
+      "category": "healthcare",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — street address not verified",
+      "searchInput": "Healing Hands Clinic - Jubilee Hills, Hyderabad Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.43829393903615,
+        "longitude": 78.39937909335056
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q140782610",
+        "https://www.healinghandsclinic.co.in/hyderabad/piles-fistula-hospital-in-jubilee-hills/"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-038",
+      "placeID": "wikidata-q125768244",
+      "name": "State Art Gallery",
+      "category": "art",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — street address not verified",
+      "searchInput": "State Art Gallery Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.43659,
+        "longitude": 78.39769
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q125768244"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-039",
+      "placeID": "wikidata-q4754374",
+      "name": "Dr. B. R. Ambedkar Open University",
+      "category": "education",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — street address not verified",
+      "searchInput": "Dr. B. R. Ambedkar Open University Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.431577777778,
+        "longitude": 78.395116666667
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q4754374",
+        "http://www.braou.ac.in/",
+        "https://ciqa.braou.ac.in/sd1.aspx"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    },
+    {
+      "caseID": "HYD-040",
+      "placeID": "wikidata-q108874431",
+      "name": "Road No.5 Jubilee Hills metro station",
+      "category": "transport",
+      "catalogueNeighbourhood": "Hyderabad metro region",
+      "scope": "nearby supplemental destination; verify locality on site",
+      "address": "Hyderabad metro region, Telangana, India — exact entrance not verified",
+      "searchInput": "Road No.5 Jubilee Hills metro station Hyderabad Telangana India",
+      "cataloguePoint": {
+        "latitude": 17.43005,
+        "longitude": 78.4232
+      },
+      "coordinateSource": "Wikidata",
+      "sourceURLs": [
+        "https://www.wikidata.org/wiki/Q108874431",
+        "https://ltmetro.com/wp-content/uploads/2025/01/HMRRouteMap_new.pdf"
+      ],
+      "fieldVerificationStatus": null,
+      "verifiedEntrance": null,
+      "referenceEvidenceRef": null,
+      "fieldRisksToCheck": [
+        "correct branch and current access",
+        "divided-road approach / wrong side",
+        "entrance versus property centre",
+        "car and walking approaches separately",
+        "motorcycle routing in Google only; no car/cycle substitution"
+      ],
+      "priority": "supplemental"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kulture independently observed provider field journeys",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "observations"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 20000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "caseID",
+          "pairID",
+          "provider",
+          "mode",
+          "status",
+          "synthetic",
+          "startedAt",
+          "origin",
+          "predictedDurationSeconds",
+          "actualDurationSeconds",
+          "wrongGate",
+          "wrongSide",
+          "unsafeInstruction",
+          "entranceErrorMetres",
+          "searchFoundCorrectBranch",
+          "searchLatencyMilliseconds",
+          "referenceEvidenceRef",
+          "referenceVerifiedAt",
+          "evidenceRef",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "caseID": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "pairID": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "provider": {
+            "enum": [
+              "mapbox",
+              "google"
+            ]
+          },
+          "mode": {
+            "enum": [
+              "driving",
+              "walking",
+              "two-wheeler"
+            ]
+          },
+          "status": {
+            "enum": [
+              "completed",
+              "incomplete",
+              "unsupported",
+              "error"
+            ]
+          },
+          "synthetic": {
+            "type": "boolean"
+          },
+          "startedAt": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "origin": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "latitude": {
+                "type": "number",
+                "minimum": 6,
+                "maximum": 38
+              },
+              "longitude": {
+                "type": "number",
+                "minimum": 68,
+                "maximum": 98
+              }
+            }
+          },
+          "predictedDurationSeconds": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 1,
+            "maximum": 86400
+          },
+          "actualDurationSeconds": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 1,
+            "maximum": 86400
+          },
+          "wrongGate": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "wrongSide": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "unsafeInstruction": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "entranceErrorMetres": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 50000
+          },
+          "searchFoundCorrectBranch": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "searchLatencyMilliseconds": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 120000
+          },
+          "referenceEvidenceRef": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "referenceVerifiedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "evidenceRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        }
+      }
+    }
+  }
+}

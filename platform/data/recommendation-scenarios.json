@@ -1,0 +1,232 @@
+[
+  {
+    "id": "01-coffee",
+    "prompt": "Find me a specialty coffee café in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [
+      "coffee"
+    ],
+    "notes": "Match sourced coffee information; do not invent ratings or hours."
+  },
+  {
+    "id": "02-conversation",
+    "prompt": "Coffee and a place for conversation in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [
+      "conversation"
+    ],
+    "notes": "Atmosphere is source description, not a live noise measurement."
+  },
+  {
+    "id": "03-dessert",
+    "prompt": "A Jubilee Hills café for desserts and coffee.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [
+      "desserts"
+    ],
+    "notes": "Use menu/category information; do not quote unverified prices."
+  },
+  {
+    "id": "04-date-coffee",
+    "prompt": "Suggest a coffee date in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [
+      "coffee"
+    ],
+    "notes": "Date suitability is an editorial suggestion, not venue verification."
+  },
+  {
+    "id": "05-date-dinner",
+    "prompt": "Plan a dinner date with food in Jubilee Hills.",
+    "expectedCategories": [
+      "food"
+    ],
+    "expectedTags": [],
+    "notes": "Do not imply a reservation or available table."
+  },
+  {
+    "id": "06-nightlife",
+    "prompt": "Explore nightlife and cocktails in Jubilee Hills.",
+    "expectedCategories": [
+      "nightlife"
+    ],
+    "expectedTags": [],
+    "notes": "Do not infer a current event, cover charge, legal eligibility or availability."
+  },
+  {
+    "id": "07-evening-food",
+    "prompt": "Food and nightlife for an evening around Jubilee Hills.",
+    "expectedCategories": [
+      "food",
+      "nightlife"
+    ],
+    "expectedTags": [],
+    "notes": "Offer category diversity; all event and opening claims need sources."
+  },
+  {
+    "id": "08-art",
+    "prompt": "Show me an art gallery and exhibitions in Jubilee Hills.",
+    "expectedCategories": [
+      "art"
+    ],
+    "expectedTags": [
+      "art"
+    ],
+    "notes": "An exhibition program is not confirmation of today's exhibition."
+  },
+  {
+    "id": "09-local-culture",
+    "prompt": "Local culture and heritage around Jubilee Hills.",
+    "expectedCategories": [
+      "heritage",
+      "art"
+    ],
+    "expectedTags": [],
+    "notes": "Respect place-specific visiting rules; do not invent access hours."
+  },
+  {
+    "id": "10-temple",
+    "prompt": "I want a respectful temple visit in Jubilee Hills.",
+    "expectedCategories": [
+      "heritage"
+    ],
+    "expectedTags": [
+      "temple"
+    ],
+    "notes": "Use source-backed temple information."
+  },
+  {
+    "id": "11-nature",
+    "prompt": "A nature walk and greenery near Jubilee Hills.",
+    "expectedCategories": [
+      "nature"
+    ],
+    "expectedTags": [
+      "walking"
+    ],
+    "notes": "Do not imply route or access safety."
+  },
+  {
+    "id": "12-birds",
+    "prompt": "Birdwatching and urban nature around Jubilee Hills.",
+    "expectedCategories": [
+      "nature"
+    ],
+    "expectedTags": [
+      "birdwatching"
+    ],
+    "notes": "Do not promise a wildlife sighting."
+  },
+  {
+    "id": "13-shopping",
+    "prompt": "Shopping and boutiques around Jubilee Hills.",
+    "expectedCategories": [
+      "shopping"
+    ],
+    "expectedTags": [],
+    "notes": "Current stock and prices are unknown."
+  },
+  {
+    "id": "14-wellness",
+    "prompt": "Wellness or a spa in Jubilee Hills.",
+    "expectedCategories": [
+      "wellness"
+    ],
+    "expectedTags": [],
+    "notes": "No treatment or medical-effect claims."
+  },
+  {
+    "id": "15-city-introduction",
+    "prompt": "Across Hyderabad, suggest iconic landmarks for a first city visit.",
+    "expectedCategories": [
+      "heritage",
+      "nature"
+    ],
+    "expectedTags": [],
+    "notes": "All Hyderabad scope; editorial prominence is not measured footfall."
+  },
+  {
+    "id": "16-history",
+    "prompt": "Across Hyderabad, I want history and heritage.",
+    "expectedCategories": [
+      "heritage"
+    ],
+    "expectedTags": [],
+    "notes": "All Hyderabad scope; avoid fabricated opening hours."
+  },
+  {
+    "id": "17-art-coffee",
+    "prompt": "Pair art with coffee around Jubilee Hills.",
+    "expectedCategories": [
+      "art",
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "A suggestion of stops, not a calculated travel itinerary."
+  },
+  {
+    "id": "18-nature-coffee",
+    "prompt": "A nature walk and then coffee around Jubilee Hills.",
+    "expectedCategories": [
+      "nature",
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "No traffic, ordering or feasibility claim without routing."
+  },
+  {
+    "id": "19-open-now",
+    "prompt": "Find a café open now in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "Must disclose that current hours/availability are not confirmed."
+  },
+  {
+    "id": "20-budget",
+    "prompt": "Coffee and desserts under ₹500 in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "Must disclose that prices are not verified."
+  },
+  {
+    "id": "21-quiet",
+    "prompt": "A quiet coffee café with no crowds in Jubilee Hills.",
+    "expectedCategories": [
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "Must disclose that noise/crowd levels are not measured."
+  },
+  {
+    "id": "22-no-bars",
+    "prompt": "Food and coffee in Jubilee Hills, no bars.",
+    "expectedCategories": [
+      "food",
+      "cafes"
+    ],
+    "expectedTags": [],
+    "notes": "Exclude nightlife rather than rewarding the negated word bars."
+  },
+  {
+    "id": "23-popular-iconic",
+    "prompt": "Across Hyderabad, show iconic places with the highest footfall.",
+    "expectedCategories": [
+      "heritage",
+      "nature"
+    ],
+    "expectedTags": [],
+    "notes": "Explicitly avoid measured-footfall ranking; disclose editorial selection."
+  }
+]

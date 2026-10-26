@@ -1,0 +1,426 @@
+{
+  "evaluatedAt": "2026-10-10T13:12:10.585Z",
+  "policy": "intent-evidence-diversity-1",
+  "catalogSHA256": "2171fb4769d288e56b4158ace32b0e1fd30be0e4c05b630e2c2347586b4d275d",
+  "scenarios": 23,
+  "passed": 23,
+  "method": "Deterministic fixture assertions, not a human preference or real-world success study",
+  "records": [
+    {
+      "id": "01-coffee",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "osm-node-1610991383",
+        "le-vantage-cafe-bar-jubilee-hills",
+        "osm-node-1885685950",
+        "osm-node-2014856040",
+        "osm-node-817353816"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "02-conversation",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "kissa-coffee-house-jubilee-hills",
+        "grano-jubilee-hills",
+        "blue-tokai-origins-jubilee-hills",
+        "osm-node-1610991383",
+        "bel-posto-the-cafe-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "No live noise, crowd or measured popularity information is available."
+      ]
+    },
+    {
+      "id": "03-dessert",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "le-vantage-cafe-bar-jubilee-hills",
+        "osm-node-1610991383",
+        "osm-node-1885685950",
+        "osm-node-2014856040",
+        "osm-node-817353816"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "04-date-coffee",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "grano-jubilee-hills",
+        "kissa-coffee-house-jubilee-hills",
+        "blue-tokai-origins-jubilee-hills",
+        "osm-node-1610991383",
+        "bel-posto-the-cafe-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "05-date-dinner",
+      "expectedCategories": [
+        "food"
+      ],
+      "resultIDs": [
+        "sakura-far-eastern-kitchen-jubilee-hills",
+        "telugu-medium-kitchen-jubilee-hills",
+        "antera-kitchen-bar-jubilee-hills",
+        "aidu-kitchen-jubilee-hills",
+        "jathara-restaurant-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "06-nightlife",
+      "expectedCategories": [
+        "nightlife"
+      ],
+      "resultIDs": [
+        "forefathers-jubilee-hills",
+        "prost-jubilee-hills",
+        "zythum-brewing-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "07-evening-food",
+      "expectedCategories": [
+        "food",
+        "nightlife"
+      ],
+      "resultIDs": [
+        "sakura-far-eastern-kitchen-jubilee-hills",
+        "prost-jubilee-hills",
+        "antera-kitchen-bar-jubilee-hills",
+        "zythum-brewing-jubilee-hills",
+        "aidu-kitchen-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "08-art",
+      "expectedCategories": [
+        "art"
+      ],
+      "resultIDs": [
+        "srishti-art-gallery-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "09-local-culture",
+      "expectedCategories": [
+        "heritage",
+        "art"
+      ],
+      "resultIDs": [
+        "peddamma-thalli-temple-jubilee-hills",
+        "srishti-art-gallery-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "10-temple",
+      "expectedCategories": [
+        "heritage"
+      ],
+      "resultIDs": [
+        "peddamma-thalli-temple-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "11-nature",
+      "expectedCategories": [
+        "nature"
+      ],
+      "resultIDs": [
+        "kbr-national-park",
+        "osm-node-13272712464",
+        "osm-way-28131043",
+        "osm-node-2713855034",
+        "osm-relation-11769747"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "Map distance is not walking or driving time. Obtain a route before travelling."
+      ]
+    },
+    {
+      "id": "12-birds",
+      "expectedCategories": [
+        "nature"
+      ],
+      "resultIDs": [
+        "kbr-national-park",
+        "osm-way-361720515",
+        "osm-way-28131043",
+        "osm-node-13272712464",
+        "osm-relation-11769747"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "13-shopping",
+      "expectedCategories": [
+        "shopping"
+      ],
+      "resultIDs": [
+        "nappa-dori-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "14-wellness",
+      "expectedCategories": [
+        "wellness"
+      ],
+      "resultIDs": [
+        "meghavi-daspalla-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "15-city-introduction",
+      "expectedCategories": [
+        "heritage",
+        "nature"
+      ],
+      "resultIDs": [
+        "birla-mandir",
+        "charminar-old-city",
+        "hussain-sagar",
+        "osm-node-13272712464",
+        "shilparamam-madhapur"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "16-history",
+      "expectedCategories": [
+        "heritage"
+      ],
+      "resultIDs": [
+        "golconda-fort",
+        "qutb-shahi-tombs",
+        "peddamma-thalli-temple-jubilee-hills",
+        "birla-mandir",
+        "charminar-old-city"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "17-art-coffee",
+      "expectedCategories": [
+        "art",
+        "cafes"
+      ],
+      "resultIDs": [
+        "srishti-art-gallery-jubilee-hills",
+        "grano-jubilee-hills",
+        "kissa-coffee-house-jubilee-hills",
+        "osm-node-1610991383",
+        "blue-tokai-origins-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": []
+    },
+    {
+      "id": "18-nature-coffee",
+      "expectedCategories": [
+        "nature",
+        "cafes"
+      ],
+      "resultIDs": [
+        "grano-jubilee-hills",
+        "kbr-national-park",
+        "osm-node-13272712464",
+        "kissa-coffee-house-jubilee-hills",
+        "blue-tokai-origins-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "Map distance is not walking or driving time. Obtain a route before travelling."
+      ]
+    },
+    {
+      "id": "19-open-now",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "le-vantage-cafe-bar-jubilee-hills",
+        "osm-node-11084918128",
+        "osm-node-11771783710",
+        "osm-node-1610991383",
+        "bel-posto-the-cafe-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "Current hours and availability are unverified; check the venue before going."
+      ]
+    },
+    {
+      "id": "20-budget",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "grano-jubilee-hills",
+        "concu-jubilee-hills",
+        "le-vantage-cafe-bar-jubilee-hills",
+        "kissa-coffee-house-jubilee-hills",
+        "osm-node-1610991383"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "Prices are unverified; the budget cannot be guaranteed."
+      ]
+    },
+    {
+      "id": "21-quiet",
+      "expectedCategories": [
+        "cafes"
+      ],
+      "resultIDs": [
+        "osm-node-1610991383",
+        "le-vantage-cafe-bar-jubilee-hills",
+        "osm-node-1885685950",
+        "osm-node-2014856040",
+        "osm-node-817353816"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "No live noise, crowd or measured popularity information is available."
+      ]
+    },
+    {
+      "id": "22-no-bars",
+      "expectedCategories": [
+        "food",
+        "cafes"
+      ],
+      "resultIDs": [
+        "grano-jubilee-hills",
+        "sakura-far-eastern-kitchen-jubilee-hills",
+        "kissa-coffee-house-jubilee-hills",
+        "blue-tokai-origins-jubilee-hills",
+        "jathara-restaurant-jubilee-hills"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "Bars and nightlife are excluded; alcohol-free service is not certified."
+      ]
+    },
+    {
+      "id": "23-popular-iconic",
+      "expectedCategories": [
+        "heritage",
+        "nature"
+      ],
+      "resultIDs": [
+        "birla-mandir",
+        "kbr-national-park",
+        "osm-node-13272712464",
+        "qutb-shahi-tombs",
+        "hussain-sagar"
+      ],
+      "categoryCoverage": true,
+      "validIDs": true,
+      "scopePass": true,
+      "barsPass": true,
+      "cautions": [
+        "No live noise, crowd or measured popularity information is available."
+      ]
+    }
+  ]
+}

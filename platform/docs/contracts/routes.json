@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "authentication": "Signed native bearer or same-origin HttpOnly cookie; operator and machine routes use separate boundaries.",
+  "concurrency": "Mutation routes document Idempotency-Key and If-Match in their modules. This inventory does not replace per-route request contracts.",
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/:city"
+    },
+    {
+      "method": "GET",
+      "path": "/:city/places/:slug"
+    },
+    {
+      "method": "GET",
+      "path": "/console"
+    },
+    {
+      "method": "GET",
+      "path": "/discovery-methodology"
+    },
+    {
+      "method": "GET",
+      "path": "/downloads/kulture-publisher.zip"
+    },
+    {
+      "method": "GET",
+      "path": "/health/live"
+    },
+    {
+      "method": "GET",
+      "path": "/health/ready"
+    },
+    {
+      "method": "GET",
+      "path": "/internal/caddy/ask"
+    },
+    {
+      "method": "POST",
+      "path": "/internal/telemetry/edge-batches"
+    },
+    {
+      "method": "POST",
+      "path": "/internal/telemetry/refresh-rules"
+    },
+    {
+      "method": "GET",
+      "path": "/places/:placeID"
+    },
+    {
+      "method": "GET",
+      "path": "/places/:placeID/arrival"
+    },
+    {
+      "method": "GET",
+      "path": "/robots.txt"
+    },
+    {
+      "method": "GET",
+      "path": "/sitemap.xml"
+    },
+    {
+      "method": "GET",
+      "path": "/sitemaps/:page"
+    },
+    {
+      "method": "GET",
+      "path": "/sites/:placeID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/apply-leases"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/bindings/:bindingID/disconnect"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/adapter/installations/:installationID/bundles"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/disconnect"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/pairings"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/adapter/installations/:installationID/pairings/:pairingID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/pairings/:pairingID/confirm"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/installations/:installationID/receipts"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/adapter/pairings"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ai/chat"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/billing/terms"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/business-taxonomy"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/catalog"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/feedback"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/feedback"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/locations/search"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/me"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/media/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/media/:id/approve-public"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/media/:id/preview"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/media/public/:id/:file"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/media/uploads"
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/media/uploads/:id/content"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/arrival-reviews"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/arrival-reviews/:graphID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/arrival-sites/:siteID/grants"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/arrival-sites/:siteID/revoke"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/billing/:id/reconcile"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/billing/:id/refund"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/billing/commands/:id/resolve"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/claims"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/claims/:claimID/review"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/media/:id/preview"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/media/:id/revoke"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/pilot-grants"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/pilot-grants/:id/revoke"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/publications/:publicationID/withdraw"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/retention/drain"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/retention/holds"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/retention/holds"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/retention/holds/:id/release"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/retention/journal"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ops/retention/replay"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/retention/status"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ops/service-requests"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/ops/service-requests/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/places"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/places/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/places/:placeID/arrival"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/places/:placeID/arrival/issues"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/profile"
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/profile"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/recommendations"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/routes"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/service-requests"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/service-requests"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/settings"
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/settings"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/team/invitations/accept"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantId/billing"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantId/billing/:id/cancel"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantId/billing/:id/resume"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantId/billing/checkout"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/claims"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/claims/:claimID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/invitations"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/tenants/:tenantID/invitations/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/members"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/tenants/:tenantID/members/:userID"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/notifications"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/notifications/:id/acknowledge"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-closures"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-closures/:id/resolve"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts"
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts/:graphID"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts/:graphID/publish"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts/:graphID/submit"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts/:graphID/withdraw"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/arrival-drafts/import-v1"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/deliveries"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/access"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/check"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/disconnect"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/domain"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/domain/activate"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/domain/preview"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/domain/verify"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/preview"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/publish"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/retry"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/destinations/:destinationID/rollback"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/drafts"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/drafts/:draftID"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/tenants/:tenantID/places/:placeID/drafts/:draftID"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/drafts/:draftID/preview"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tenants/:tenantID/places/:placeID/drafts/:draftID/publish"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/entitlement"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/export"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/export/archive"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/media"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/publications/:publicationID"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tenants/:tenantID/places/:placeID/visibility"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/webhooks/razorpay"
+    }
+  ]
+}

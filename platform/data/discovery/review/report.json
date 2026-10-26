@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-10-01T15:01:35.538Z",
+  "applied": true,
+  "sources": [
+    {
+      "region": "kokapet",
+      "bbox": [
+        17.375,
+        78.315,
+        17.419,
+        78.363
+      ],
+      "fetchedAt": "2026-10-01T14:33:44.450Z",
+      "sourceTimestamp": "2026-10-01T14:31:06Z",
+      "querySha256": "e73909f869a7cf97989ab2192c786c6f8fb6e85c8f7d8ab815b28c064ec5498d",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "sourcePolicy": {
+        "kind": "direct-public-api",
+        "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+        "robotsScope": "Website crawl exclusions recorded; documented developer API request uses the explicit API resource policy."
+      },
+      "received": 66
+    },
+    {
+      "region": "jubilee-hills",
+      "bbox": [
+        17.411,
+        78.388,
+        17.449,
+        78.429
+      ],
+      "fetchedAt": "2026-10-01T14:33:49.376Z",
+      "sourceTimestamp": "2026-10-01T14:31:06Z",
+      "querySha256": "68664f94f32107853b488fee7d87d400ab3816368027a5ffd8325941e21cbfaa",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "sourcePolicy": {
+        "kind": "direct-public-api",
+        "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+        "robotsScope": "Website crawl exclusions recorded; documented developer API request uses the explicit API resource policy."
+      },
+      "received": 178
+    }
+  ],
+  "priorPlaces": 150,
+  "totalPlaces": 150,
+  "totalMapped": 121,
+  "added": 0,
+  "enriched": 0,
+  "categoriesAdded": {},
+  "regionsAdded": {},
+  "newRecordsWithImages": 0,
+  "licensedImagesApplied": 2,
+  "officialPreviewsApplied": 5,
+  "totalWithImages": 25,
+  "totalMissingImages": 125,
+  "categoriesTotal": {
+    "cafes": 42,
+    "art": 3,
+    "heritage": 6,
+    "nature": 7,
+    "nightlife": 3,
+    "food": 6,
+    "shopping": 1,
+    "wellness": 1,
+    "healthcare": 60,
+    "parks": 15,
+    "community": 4,
+    "stationery": 2
+  },
+  "imageRightsTotal": {
+    "official-public-preview": 16,
+    "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/": 1,
+    "CC BY-SA 4.0": 2,
+    "directory-public-preview; reuse permission not established": 3,
+    "third-party-public-preview; reuse permission not established": 2,
+    "editorial-public-preview; reuse permission not established": 1
+  },
+  "healthcareKinds": {
+    "blood bank": 4,
+    "clinic": 7,
+    "pharmacy": 11,
+    "hospital": 29,
+    "psychotherapist": 1,
+    "centre": 2,
+    "dentist": 2,
+    "doctors": 1,
+    "Hospital": 2,
+    "Clinic": 1
+  },
+  "missingImages": [],
+  "held": [
+    {
+      "id": "osm-way-568973277",
+      "reason": "same_name_nearby_or_unlocated_requires_review",
+      "possibleExistingID": "osm-way-165302486"
+    },
+    {
+      "id": "osm-node-11018919100",
+      "reason": "Source address says Saroornagar/Saidabad but feature point is in Kokapet rectangle; conflicting locality, withheld."
+    },
+    {
+      "id": "osm-way-1222793133",
+      "reason": "High Fields residential garden: public access not established; withheld."
+    },
+    {
+      "id": "osm-way-1222890642",
+      "reason": "High Fields residential garden: public access not established; withheld."
+    },
+    {
+      "id": "osm-way-1222890659",
+      "reason": "High Fields residential garden: public access not established; withheld."
+    },
+    {
+      "id": "osm-node-827576106",
+      "reason": "Health trust office is not independently confirmed as a patient-facing facility; withheld."
+    },
+    {
+      "id": "osm-node-4422254585",
+      "reason": "Generic Blood Bank name without facility identity; withheld for review."
+    },
+    {
+      "id": "osm-node-6840941123",
+      "reason": "B. DUBS mapped as cafe; ambiguous restaurant/bar classification, withheld."
+    },
+    {
+      "id": "osm-node-7025820758",
+      "reason": "Generic Pharmacist name without branch identity; withheld for review."
+    },
+    {
+      "id": "osm-node-7025820786",
+      "reason": "Source address says Shapur Nagar/Jeedimetla but feature point is in Jubilee rectangle; conflicting locality, withheld."
+    },
+    {
+      "id": "osm-node-7025820863",
+      "reason": "Name is 7Ten Spa but OSM category is cafe; conflicting type, withheld."
+    },
+    {
+      "id": "osm-node-8909248554",
+      "reason": "School ground lacks confirmed general public access; not presented as a public park."
+    },
+    {
+      "id": "osm-node-11005951281",
+      "reason": "Khairatabad named facility is pinned in Jubilee rectangle; locality conflict pending independent review."
+    },
+    {
+      "id": "osm-node-11005968512",
+      "reason": "Jawhar Nagar/Balaji Nagar governmental record has ambiguous locality; withheld until branch verification."
+    },
+    {
+      "id": "osm-node-11005968513",
+      "reason": "Ameerpet/Balkampet named facility is pinned in Jubilee rectangle; locality conflict pending independent review."
+    },
+    {
+      "id": "osm-way-740791127",
+      "reason": "Football coaching grounds lack confirmed general public access; not presented as public park."
+    }
+  ],
+  "skipped": {
+    "missing_or_outside_point": 3,
+    "unnamed_or_unsupported": 115,
+    "restricted_access": 2
+  },
+  "coverage": "Bounded OSM research extract. Not a complete inventory, current-operation verification, boundary verification, or verified entrance dataset.",
+  "license": {
+    "data": "ODbL-1.0",
+    "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors",
+    "source": "https://www.openstreetmap.org/copyright"
+  },
+  "preservedLegacyImageCaveat": "Existing official-public-preview fields are preserved; they are not asserted to be openly licensed."
+}
