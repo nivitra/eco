@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "country": "IN",
+  "types": [
+    {
+      "id": "cafe",
+      "label": "Café",
+      "schemaType": "CafeOrCoffeeShop",
+      "discoveryCategory": "cafes"
+    },
+    {
+      "id": "restaurant",
+      "label": "Restaurant",
+      "schemaType": "Restaurant",
+      "discoveryCategory": "food"
+    },
+    {
+      "id": "bar",
+      "label": "Bar & nightlife",
+      "schemaType": "BarOrPub",
+      "discoveryCategory": "nightlife"
+    },
+    {
+      "id": "gallery",
+      "label": "Art & gallery",
+      "schemaType": "ArtGallery",
+      "discoveryCategory": "art"
+    },
+    {
+      "id": "heritage",
+      "label": "Heritage & culture",
+      "schemaType": "LandmarksOrHistoricalBuildings",
+      "discoveryCategory": "heritage"
+    },
+    {
+      "id": "park",
+      "label": "Park & nature",
+      "schemaType": "Park",
+      "discoveryCategory": "nature"
+    },
+    {
+      "id": "retail",
+      "label": "Shopping & retail",
+      "schemaType": "Store",
+      "discoveryCategory": "shopping"
+    },
+    {
+      "id": "wellness",
+      "label": "Fitness & wellness",
+      "schemaType": "HealthAndBeautyBusiness",
+      "discoveryCategory": "wellness"
+    },
+    {
+      "id": "hotel",
+      "label": "Hotel & accommodation",
+      "schemaType": "LodgingBusiness",
+      "discoveryCategory": null
+    },
+    {
+      "id": "salon",
+      "label": "Salon & grooming",
+      "schemaType": "BeautySalon",
+      "discoveryCategory": null
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "schemaType": "MedicalBusiness",
+      "discoveryCategory": null
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "schemaType": "EducationalOrganization",
+      "discoveryCategory": null
+    },
+    {
+      "id": "professional_services",
+      "label": "Professional services",
+      "schemaType": "ProfessionalService",
+      "discoveryCategory": null
+    },
+    {
+      "id": "automotive",
+      "label": "Automotive",
+      "schemaType": "AutomotiveBusiness",
+      "discoveryCategory": null
+    },
+    {
+      "id": "repair",
+      "label": "Repair & maintenance",
+      "schemaType": "HomeAndConstructionBusiness",
+      "discoveryCategory": null
+    },
+    {
+      "id": "manufacturing",
+      "label": "Manufacturing",
+      "schemaType": "Organization",
+      "discoveryCategory": null
+    },
+    {
+      "id": "other",
+      "label": "Other business",
+      "schemaType": "LocalBusiness",
+      "discoveryCategory": null
+    }
+  ]
+}

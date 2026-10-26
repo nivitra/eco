@@ -1,0 +1,2457 @@
+{
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "fetchedAt": "2026-10-01T14:33:49.376Z",
+  "query": "[out:json][timeout:45][maxsize:16777216];(\nnwr[\"amenity\"~\"^(cafe|hospital|clinic|doctors|dentist|pharmacy|community_centre|arts_centre|library|marketplace|townhall|social_centre)$\"](17.411,78.388,17.449,78.429);\nnwr[\"healthcare\"](17.411,78.388,17.449,78.429);\nnwr[\"shop\"~\"^(stationery|copyshop|books)$\"](17.411,78.388,17.449,78.429);\nnwr[\"leisure\"~\"^(park|garden|playground|recreation_ground|common)$\"](17.411,78.388,17.449,78.429);\nnwr[\"place\"=\"square\"](17.411,78.388,17.449,78.429);\nnwr[\"natural\"=\"water\"][\"name\"](17.411,78.388,17.449,78.429);\n);out tags center;",
+  "querySha256": "68664f94f32107853b488fee7d87d400ab3816368027a5ffd8325941e21cbfaa",
+  "sourcePolicy": {
+    "kind": "direct-public-api",
+    "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+    "robotsScope": "Website crawl exclusions recorded; documented developer API request uses the explicit API resource policy."
+  },
+  "robots": {
+    "url": "https://overpass-api.de/robots.txt",
+    "status": 200,
+    "text": "User-agent: *\nDisallow: /api/\nDisallow: /munin/\nSitemap: https://z.overpass-api.de/api/sitemap\n",
+    "checkedAt": "2026-10-01T14:33:49.376Z"
+  },
+  "data": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-10-01T14:31:06Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 349267517,
+        "lat": 17.4406857,
+        "lon": 78.3916647,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "1-98/90/26, Near IOC Petrol Bunk, Hi-Tech City Main Road, Madhapur",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Vikram Hospitals",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 349267744,
+        "lat": 17.4405212,
+        "lon": 78.3916995,
+        "tags": {
+          "amenity": "pharmacy",
+          "healthcare": "pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 349267752,
+        "lat": 17.4411195,
+        "lon": 78.3922165,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 698705213,
+        "lat": 17.4172588,
+        "lon": 78.4118211,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "MedPlus",
+          "brand:wikidata": "Q65684234",
+          "dispensing": "no",
+          "healthcare": "pharmacy",
+          "name": "MedPlus"
+        }
+      },
+      {
+        "type": "node",
+        "id": 708303186,
+        "lat": 17.4411848,
+        "lon": 78.3917482,
+        "tags": {
+          "amenity": "pharmacy",
+          "dispensing": "no",
+          "healthcare": "pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 817353816,
+        "lat": 17.435846,
+        "lon": 78.4016464,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Cafe Coffee Day",
+          "brand:wikidata": "Q5017235",
+          "cuisine": "coffee_shop",
+          "name": "Cafe Coffee Day",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 827576106,
+        "lat": 17.4301742,
+        "lon": 78.3937323,
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Arogyasree Health care trust"
+        }
+      },
+      {
+        "type": "node",
+        "id": 1610991383,
+        "lat": 17.4152669,
+        "lon": 78.4088878,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Cafe Coffee Day",
+          "brand:wikidata": "Q5017235",
+          "cuisine": "coffee_shop",
+          "name": "Cafe Coffee Day",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 1885685950,
+        "lat": 17.4238942,
+        "lon": 78.4247167,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Cafe Coffee Day",
+          "brand:wikidata": "Q5017235",
+          "cuisine": "coffee_shop",
+          "name": "Cafe Coffee Day",
+          "name:te": "కేఫ్ కాఫీ డే",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2014856040,
+        "lat": 17.4388354,
+        "lon": 78.3967696,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Cafe Coffee Day",
+          "brand:wikidata": "Q5017235",
+          "cuisine": "coffee_shop",
+          "name": "Cafe Coffee Day",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2062758122,
+        "lat": 17.4299365,
+        "lon": 78.428122,
+        "tags": {
+          "amenity": "pharmacy",
+          "healthcare": "pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2466611427,
+        "lat": 17.42367,
+        "lon": 78.4125626,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Barista Lavazza"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2713855034,
+        "lat": 17.4293674,
+        "lon": 78.4199736,
+        "tags": {
+          "leisure": "park",
+          "name": "mch park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2713892815,
+        "lat": 17.4304083,
+        "lon": 78.4106297,
+        "tags": {
+          "leisure": "park",
+          "name": "bamboo park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2713917598,
+        "lat": 17.4384396,
+        "lon": 78.4084144,
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2713936303,
+        "lat": 17.4311452,
+        "lon": 78.3920499,
+        "tags": {
+          "leisure": "park",
+          "name": "Durgam Cheruvu Secret Lake Park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2794485602,
+        "lat": 17.4391952,
+        "lon": 78.3983227,
+        "tags": {
+          "amenity": "cafe",
+          "internet_access": "no",
+          "name": "Chocolate Room",
+          "smoking": "outside"
+        }
+      },
+      {
+        "type": "node",
+        "id": 3541446144,
+        "lat": 17.4160221,
+        "lon": 78.3916108,
+        "tags": {
+          "amenity": "hospital",
+          "name": "Saraswathi Nursing Home"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4422254585,
+        "lat": 17.4249205,
+        "lon": 78.4139937,
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Blood Bank"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4609361390,
+        "lat": 17.421538,
+        "lon": 78.4096862,
+        "tags": {
+          "addr:housenumber": "66A",
+          "addr:postcode": "500096",
+          "addr:street": "Road No 70",
+          "amenity": "community_centre",
+          "name": "Collab house",
+          "name:en": "Collab house"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4670761890,
+        "lat": 17.4171713,
+        "lon": 78.412363,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "MedPlus",
+          "brand:wikidata": "Q65684234",
+          "healthcare": "pharmacy",
+          "name": "MedPlus",
+          "name:en": "MedPlus Mart",
+          "website": "https://www.medplusmart.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4672021893,
+        "lat": 17.4208629,
+        "lon": 78.4025642,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy",
+          "name:en": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4677877511,
+        "lat": 17.417626,
+        "lon": 78.411422,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy",
+          "name:en": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4716873492,
+        "lat": 17.4145022,
+        "lon": 78.4089445,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy",
+          "name:en": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5257229421,
+        "lat": 17.4336528,
+        "lon": 78.4047279,
+        "tags": {
+          "amenity": "cafe",
+          "internet_access": "wlan",
+          "name": "Ciclo Café",
+          "website": "https://ciclo.cafe/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5259994123,
+        "lat": 17.4246579,
+        "lon": 78.4101163,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Kaficko"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5448265105,
+        "lat": 17.4329059,
+        "lon": 78.4071232,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Starbucks",
+          "brand:wikidata": "Q37158",
+          "cuisine": "coffee_shop",
+          "level": "1",
+          "name": "Starbucks",
+          "official_name": "Starbucks Coffee",
+          "shop": "coffee",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5966835110,
+        "lat": 17.4358657,
+        "lon": 78.4010621,
+        "tags": {
+          "healthcare": "psychotherapist",
+          "healthcare:speciality": "psychiatry",
+          "name": "Tranquil Minds",
+          "payment:coins": "yes",
+          "payment:maestro": "yes",
+          "payment:notes": "yes",
+          "payment:visa": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6213046486,
+        "lat": 17.429811,
+        "lon": 78.4060125,
+        "tags": {
+          "amenity": "cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6213051887,
+        "lat": 17.4290162,
+        "lon": 78.4052452,
+        "tags": {
+          "addr:street": "Road no. 44",
+          "amenity": "cafe",
+          "name": "Harika Tiffins &Snacks",
+          "name:en": "Harika Tiffins & Snacks",
+          "phone": "9949696327"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6217853185,
+        "lat": 17.4257981,
+        "lon": 78.4207625,
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Red Cross Nature Cure Centre",
+          "name:en": "Red Cross Instuite of Nature Cure and Yoga",
+          "opening_hours": "Mo-Sa 00:00-24:00"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6352370685,
+        "lat": 17.4414944,
+        "lon": 78.3916686,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Dostea Chai Café"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6471883031,
+        "lat": 17.4248083,
+        "lon": 78.4225617,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Ashoka Capitol Building, Road No 2, Banjara Hills",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:email": "cfshyd.appointment@centreforsight.net",
+          "contact:mobile": "08500652020;08500552020;08500152020;08500252020",
+          "healthcare": "hospital",
+          "healthcare:speciality": "ophthalmology",
+          "medical_system": "Allopathic",
+          "name": "Centre For Sight Superspecialty Eye Hospital",
+          "operator:type": "private",
+          "phone": "040 40045500;040 40042115;040 40042116;040 40042117;040 40042118;040 40042119",
+          "source": "OpenGovernmentData",
+          "website": "https://www.centreforsight.net/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6482049740,
+        "lat": 17.4311263,
+        "lon": 78.4266108,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "8-3-231/A/516,517,A-Block, Sri Krishna Nagar, Yousufguda",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Anvitha Hospital",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6484730153,
+        "lat": 17.4372474,
+        "lon": 78.3942747,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "1-66/4/194, Block-B, Kavurihills, Durgam Cheruvu Road, Madhava Nagar, Beside Shivaramalayam, Madhapur",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Praanadah Hospital",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6485134606,
+        "lat": 17.4406252,
+        "lon": 78.4242403,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Rahamath Nagar, Yousufguda",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "name": "Sadanand Nursing Home",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6485848266,
+        "lat": 17.4391256,
+        "lon": 78.3958378,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "1-88/5/A, Plot No. 274, Opp. Madhapur Police Station, Kavuri Hills",
+          "addr:postcode": "500081",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "L.V. Prasad Eye Institute",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6487116810,
+        "lat": 17.4343967,
+        "lon": 78.4173229,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot No. 225/A, Road No 17, Jubilee Hills Check Post",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Srivision Super Speciality Eye Hospital",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6487866891,
+        "lat": 17.437122,
+        "lon": 78.4272954,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "8-3-229/37, Tahir Villa, Near Dena Bank, Opposite St Mary’s Junior College, Yousufguda Check Post",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:email": "drsmguro@gmail.com",
+          "contact:phone": "040-23608179",
+          "healthcare": "hospital",
+          "name": "Fehmi Care Hospital",
+          "source": "OpenGovernmentData",
+          "website": "https://fehmicarehospital.com"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6496590575,
+        "lat": 17.4301078,
+        "lon": 78.4061931,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot No. 1110, Road No. 55, Opposite Peddamma Temple, Jubilee Hills",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:email": "info@stopiles.com",
+          "healthcare": "hospital",
+          "name": "Stopiles",
+          "phone": "040 39565230; 7799790251",
+          "source": "OpenGovernmentData",
+          "website": "https://www.stopiles.com"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6505507940,
+        "lat": 17.4299337,
+        "lon": 78.4271117,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Jubilee Hills Road, Krishna Nagar",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Seethal Nursing Home",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6530792770,
+        "lat": 17.4383029,
+        "lon": 78.3994983,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot No. 729, Road 36, Jubilee Hills",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "email": "life@livlifehospitals.com",
+          "health_facility:type": "24 Hour Patient Care; Day Care Unit; Diagnostic and Pathology Services; Pharmacy",
+          "healthcare": "hospital",
+          "healthcare:speciality": "Dermatology; Advanced Laparoscopy",
+          "medical_system": "Allopathic",
+          "name": "Live Life Hospital",
+          "operator:type": "private",
+          "phone": "040 30888888",
+          "source": "OpenGovernmentData",
+          "website": "https://www.livlifehospitals.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6531378729,
+        "lat": 17.4293887,
+        "lon": 78.4178258,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot No. 99, Road No. 1, Near Chiranjeevi Blood Bank, Jubilee Hills Check Post",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:email": "info@avishospitals.com ; contact@avishospitals.com",
+          "contact:phone": "+91 9949034085 ; +91 9989527715",
+          "healthcare": "hospital",
+          "name": "Avis Hospitals",
+          "old_name": "Beams Hospital",
+          "source": "OpenGovernmentData",
+          "website": "https://www.avishospitals.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6542632840,
+        "lat": 17.4484974,
+        "lon": 78.4237723,
+        "tags": {
+          "addr:district": "Adilabad",
+          "addr:full": "28-181/1, Rajeevnagar, Near Water Tank",
+          "addr:postcode": "504208",
+          "addr:state": "Telangana",
+          "addr:street": "Gopalwada",
+          "addr:subdistrict": "Mancherial",
+          "healthcare": "centre",
+          "name": "Urban Health Centre, Rajeevnagar",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6549366073,
+        "lat": 17.4137266,
+        "lon": 78.4244857,
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:full": "H.No: 8-2-293/82/1/4A, 5A & 6A, MLA COLONY, ROAD NO 12, BANJARA HILLS",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:phone": "040 46289999",
+          "name": "CITI NEURO CENTER",
+          "operator:type": "private",
+          "source": "OpenGovernmentData",
+          "website": "https://www.citineurocentre.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6559338844,
+        "lat": 17.4401185,
+        "lon": 78.4236932,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Near PJR Statue, Rahamath Nagar 'X' Road, Yousufguda",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "name": "Pavithra Nursing Home",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6560413797,
+        "lat": 17.4145161,
+        "lon": 78.4119666,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Apollo hospital, Ground floor, Jubilee hills",
+          "addr:postcode": "500096",
+          "addr:state": "Telangana",
+          "contact:mobile": "4023607777",
+          "healthcare": "blood_bank",
+          "name": "Apollo Hospital's Blood Bank",
+          "opening_hours": "24/7",
+          "operator:type": "private",
+          "phone": "04023607777; Extn:2604",
+          "source": "OpenGovernmentData",
+          "website": "https://www.apollohospitals.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6656722796,
+        "lat": 17.4145493,
+        "lon": 78.3906578,
+        "tags": {
+          "addr:district": "Rangareddy",
+          "addr:place": "Market",
+          "addr:state": "Telangana",
+          "addr:street": "Rai Darga",
+          "addr:subdistrict": "Serilingampally",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "SubCentre Raidurga (Urban)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6811749007,
+        "lat": 17.4440504,
+        "lon": 78.3881066,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "1-98/B, Plot 20&21,1-98/15/9,Opp: Hitech theatre, Sri Sai Nagar, Madhapur",
+          "addr:postcode": "500081",
+          "addr:state": "Telangana",
+          "amenity": "dentist",
+          "contact:mobile": "9000451008",
+          "healthcare": "dentist",
+          "name": "32 Happy Teeth Dental Clinic",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6811749119,
+        "lat": 17.4447512,
+        "lon": 78.3884762,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Hitech City Road, Sri Sai Nagar, Madhapur",
+          "addr:postcode": "500081",
+          "addr:state": "Telangana",
+          "amenity": "doctors",
+          "contact:mobile": "9246523045",
+          "healthcare": "doctor",
+          "name": "Dr. B.Srinivas",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6811749136,
+        "lat": 17.432594,
+        "lon": 78.4275652,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Krishna Nagar, near Sri Sairam High School Main Branch, Yousufguda",
+          "addr:postcode": "500045",
+          "addr:state": "Telangana",
+          "amenity": "clinic",
+          "contact:mobile": "9704677086",
+          "healthcare": "clinic",
+          "name": "Asha Clinic",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6840941123,
+        "lat": 17.4337768,
+        "lon": 78.4049578,
+        "tags": {
+          "amenity": "cafe",
+          "name": "B. DUBS"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6866161427,
+        "lat": 17.4479907,
+        "lon": 78.4153814,
+        "tags": {
+          "description": "its a park",
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7021303765,
+        "lat": 17.4430962,
+        "lon": 78.3918626,
+        "tags": {
+          "amenity": "clinic",
+          "healthcare": "laboratory",
+          "name": "Crystal Vision Eye Care Center"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820758,
+        "lat": 17.4406949,
+        "lon": 78.3943588,
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Srinivasa Hospital"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820761,
+        "lat": 17.4403669,
+        "lon": 78.3950098,
+        "tags": {
+          "amenity": "pharmacy",
+          "healthcare": "pharmacy",
+          "name": "Pharmacist"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820780,
+        "lat": 17.4442543,
+        "lon": 78.3973902,
+        "tags": {
+          "amenity": "cafe",
+          "name": "The Blender's Cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820786,
+        "lat": 17.44582,
+        "lon": 78.3924173,
+        "tags": {
+          "addr:city": "hyderabad",
+          "addr:district": "rangareddy",
+          "addr:housenumber": "APIIC Colony Beside State Bank of India , Shapur Nagar Jeedimetla Hyderabad",
+          "addr:postcode": "500055",
+          "addr:street": "Near SBI Bank",
+          "amenity": "hospital",
+          "emergency": "yes",
+          "healthcare": "hospital",
+          "healthcare:speciality": "gynaecology",
+          "name": "lifespan hospitals"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820818,
+        "lat": 17.4487951,
+        "lon": 78.3921706,
+        "tags": {
+          "amenity": "clinic",
+          "healthcare": "clinic",
+          "name": "Krithi Children Clinic"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820829,
+        "lat": 17.4478808,
+        "lon": 78.3905092,
+        "tags": {
+          "amenity": "pharmacy",
+          "healthcare": "pharmacy",
+          "name": "Siddha Nagarjuna Ayurveda pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820838,
+        "lat": 17.4346129,
+        "lon": 78.3939618,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Waffle House"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820854,
+        "lat": 17.4336999,
+        "lon": 78.4043358,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Ciclo Cafe & Bicycle Shop"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820863,
+        "lat": 17.435928,
+        "lon": 78.4029825,
+        "tags": {
+          "amenity": "cafe",
+          "name": "7Ten Spa"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820884,
+        "lat": 17.4406954,
+        "lon": 78.3926876,
+        "tags": {
+          "amenity": "community_centre",
+          "name": "Ganga"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820892,
+        "lat": 17.4413009,
+        "lon": 78.3912398,
+        "tags": {
+          "amenity": "pharmacy",
+          "branch": "Pharmacy and General Store",
+          "brand": "MedPlus",
+          "brand:wikidata": "Q65684234",
+          "healthcare": "pharmacy",
+          "name": "MedPlus"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7025820915,
+        "lat": 17.4413783,
+        "lon": 78.3880897,
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Samanta Homeopathy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7043245719,
+        "lat": 17.443382,
+        "lon": 78.3917089,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Chai Point",
+          "brand:wikidata": "Q28173415",
+          "cuisine": "coffee_shop",
+          "name": "Chai Point",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7113996685,
+        "lat": 17.4314834,
+        "lon": 78.4260064,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Laiba's cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7248877409,
+        "lat": 17.4122574,
+        "lon": 78.3950198,
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:street": "OU Colony, Shaikpet, Dargha",
+          "healthcare": "hospital",
+          "healthcare:speciality": "general",
+          "name": "Aditya Hospital"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8113625322,
+        "lat": 17.4196586,
+        "lon": 78.4120777,
+        "tags": {
+          "amenity": "cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8751713608,
+        "lat": 17.4121129,
+        "lon": 78.4229918,
+        "tags": {
+          "addr:district": "Rangareddy",
+          "addr:full": "8-2-293/82/L, 350-A, Road Number 12, Banjara Hills",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "name": "Uchvaas Hospital",
+          "source": "Local Knowledge"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8752711610,
+        "lat": 17.4283522,
+        "lon": 78.4251697,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Jawahar Colony, Sri Nagar Colony, Krishna Nagar",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "description": "Primary Health Centre",
+          "healthcare": "centre",
+          "name": "Primary Health Centre, Jubili Hills",
+          "source": "Local Knowledge"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8759319675,
+        "lat": 17.4263881,
+        "lon": 78.4204343,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "No. 8-2-269/3/1/4, Road No. 2, near NATCO Pharma, Park View Enclave, Banjara Hills, Hyderabad",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "healthcare:speciality": "fertility",
+          "name": "Oasis Fertility Centre",
+          "source": "Local Knowledge"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8760246825,
+        "lat": 17.4272659,
+        "lon": 78.4143269,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Rd Number 45, Jubilee Hills, Hyderabad",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "MAA E.N.T. Hospitals",
+          "source": "Local Knowledge"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8909248550,
+        "lat": 17.4469152,
+        "lon": 78.4286336,
+        "tags": {
+          "leisure": "park",
+          "name": "AG Colony Park-2"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8909248553,
+        "lat": 17.4475954,
+        "lon": 78.4252067,
+        "tags": {
+          "leisure": "park",
+          "name": "Walkers Park 1"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8909248554,
+        "lat": 17.4477505,
+        "lon": 78.4267516,
+        "tags": {
+          "leisure": "playground",
+          "name": "Jasmine High School Ground"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9150847517,
+        "lat": 17.440457,
+        "lon": 78.3974255,
+        "tags": {
+          "addr:postcode": "500033",
+          "addr:street": "kavuri hills road",
+          "amenity": "cafe",
+          "name": "HummingBird Café",
+          "phone": "040 4852 4995"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9903874810,
+        "lat": 17.4345267,
+        "lon": 78.4255386,
+        "tags": {
+          "access": "private",
+          "leisure": "playground",
+          "max_age": "100",
+          "min_age": "21",
+          "name": "Police Ground"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10171328871,
+        "lat": 17.447691,
+        "lon": 78.3919352,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Cosa de Rosa"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10989320886,
+        "lat": 17.4294258,
+        "lon": 78.4128852,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Shaikpet",
+          "addr:state": "Telangana",
+          "addr:street": "Rd No.5 Jawahar Colony",
+          "addr:subdistrict": "Shaikpet",
+          "amenity": "clinic",
+          "healthcare": "clinic",
+          "name": "Urban Primary Health Centre, Jubilee Hills",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10994480835,
+        "lat": 17.4376299,
+        "lon": 78.4281255,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Jawahar Nagar, Hyderabad",
+          "addr:state": "Telangana",
+          "addr:street": "Yadagiri Nagar,",
+          "addr:subdistrict": "Shaikpet",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Gurubramha Nagar Community Hall (Basti Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005885067,
+        "lat": 17.4402554,
+        "lon": 78.4226887,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Venkatagiri Pjr Ch, Yousufguda",
+          "addr:state": "Telangana",
+          "addr:street": "Venkatagiri PJR CH, Yousufguda",
+          "addr:subdistrict": "Khairatabad",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Venkatagiri PJR CH, Yousufguda (Basthi Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005951281,
+        "lat": 17.4448127,
+        "lon": 78.4219109,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Taj Enclave",
+          "addr:state": "Telangana",
+          "addr:street": "6-1-968",
+          "addr:subdistrict": "Khairatabad",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "CHC KHAIRATABAD",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005961814,
+        "lat": 17.4405445,
+        "lon": 78.4228308,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Karmikanagar Community Hall Rahmathnagar",
+          "addr:state": "Telangana",
+          "addr:street": "Karmikanagar Community Hall Rahmathnagar",
+          "addr:subdistrict": "Khairatabad",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Karmikanagar Community Hall Rahmathnagar (Basthi Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005968512,
+        "lat": 17.4395184,
+        "lon": 78.4239332,
+        "tags": {
+          "addr:district": "Medchal Malkajgiri",
+          "addr:place": "Balaji Nagar",
+          "addr:state": "Telangana",
+          "addr:street": "Municipal Office Road",
+          "addr:subdistrict": "Medchal",
+          "amenity": "doctors",
+          "healthcare": "doctor",
+          "name": "Government Ayurveda Dispensary, Jawhar Nagar (NRHM)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005968513,
+        "lat": 17.4485486,
+        "lon": 78.4248854,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Opp. Old Police Station",
+          "addr:state": "Telangana",
+          "addr:street": "BALKAMPET ROAD",
+          "addr:subdistrict": "Ameerpet",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Community Health Centre, AMEERPET",
+          "operational_status": "operational",
+          "operator:type": "government"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11005968616,
+        "lat": 17.4422307,
+        "lon": 78.423707,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Hyderabad, Telangana",
+          "addr:state": "Telangana",
+          "addr:street": "Vengal Rao Nagar,",
+          "addr:subdistrict": "Shaikpet",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Jawahar Nagar CH.,Vengal Rao Nagar, (Basti Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11021349280,
+        "lat": 17.4163843,
+        "lon": 78.3926882,
+        "tags": {
+          "addr:district": "Rangareddy",
+          "addr:place": "Raidarga, Serilingampally",
+          "addr:state": "Telangana",
+          "addr:street": "Raidarga, Serilingampally",
+          "addr:subdistrict": "Serilingampally",
+          "amenity": "clinic",
+          "healthcare": "clinic",
+          "name": "Urban Primary Health Centre, Raidarga, Serilingampally",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11021368399,
+        "lat": 17.4257279,
+        "lon": 78.4261702,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Hyderabad, Telangana 500073",
+          "addr:state": "Telangana",
+          "addr:street": "Sri Nagar Colony,",
+          "addr:subdistrict": "Khairatabad",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Ambika Mahila Mandali, Jubliee Hills (Basti Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11021383975,
+        "lat": 17.4289651,
+        "lon": 78.423893,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Jubilee Hills",
+          "addr:state": "Telangana",
+          "addr:street": "Jubilee Hills",
+          "addr:subdistrict": "Shaikpet",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Swami Vivekanandanagar Jubliee Hills (Basthi Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11021397130,
+        "lat": 17.4332643,
+        "lon": 78.4255515,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Edi Bazaar, Hyderabad",
+          "addr:state": "Telangana",
+          "addr:street": "Edi Bazaar west",
+          "addr:subdistrict": "Khairatabad",
+          "amenity": "health_post",
+          "healthcare": "yes",
+          "name": "Yosufguda Basti Community Hall, Yosufguda, Khairatabad (Basti Dawakhana)",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11021399428,
+        "lat": 17.4163204,
+        "lon": 78.4084757,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Shaikpet",
+          "addr:state": "Telangana",
+          "addr:street": "BGR Nagar, Near Sheikpet, Nala, Film Nagar",
+          "addr:subdistrict": "Shaikpet",
+          "amenity": "clinic",
+          "healthcare": "clinic",
+          "name": "Urban Primary Health Centre, Film Nagar",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11084918128,
+        "lat": 17.4468771,
+        "lon": 78.4232229,
+        "tags": {
+          "amenity": "cafe",
+          "cuisine": "kebab;indian",
+          "name": "Mubarak Cafe And Restarunt"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11597368919,
+        "lat": 17.4337892,
+        "lon": 78.4020089,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Autumn Leaf"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11770988845,
+        "lat": 17.4288809,
+        "lon": 78.4095046,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "check_date": "2024-03-29",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11771783710,
+        "lat": 17.413327,
+        "lon": 78.4277314,
+        "tags": {
+          "amenity": "cafe",
+          "check_date": "2024-03-29",
+          "name": "Cafe Niloufer"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13272712464,
+        "lat": 17.4169549,
+        "lon": 78.4165479,
+        "tags": {
+          "leisure": "park",
+          "name": "GHMC Monolith Park"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14184640651,
+        "lat": 17.4161721,
+        "lon": 78.3923485,
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:country": "IN",
+          "addr:floor": "1",
+          "addr:housename": "KS Square",
+          "addr:housenumber": "5-99/2",
+          "addr:postcode": "500104",
+          "addr:state": "Telangana",
+          "addr:street": "Old Mumbai Hwy",
+          "addr:suburb": "Rai Durg",
+          "amenity": "dentist",
+          "healthcare": "dentist",
+          "name": "STHIRA Dentistry & Facial Surgery",
+          "opening_hours": "Mo-Sa 10:00-20:30; Su 10:00-14:00",
+          "phone": "+91 79891 83984",
+          "website": "https://sthirahealthcare.com"
+        }
+      },
+      {
+        "type": "way",
+        "id": 28131043,
+        "center": {
+          "lat": 17.4310542,
+          "lon": 78.3899966
+        },
+        "tags": {
+          "leisure": "nature_reserve",
+          "name": "Durgam Cheruvu",
+          "name:fa": "دریاچه درگم چرووو",
+          "name:ml": "ദുർഗ്ഗം ചെരുവ്",
+          "name:te": "దుర్గం చెరువు",
+          "natural": "water",
+          "tourism": "attraction",
+          "water": "lake",
+          "wikidata": "Q5316410",
+          "wikimedia_commons": "Category:Durgam Cheruvu",
+          "wikipedia": "en:Durgam Cheruvu"
+        }
+      },
+      {
+        "type": "way",
+        "id": 108233467,
+        "center": {
+          "lat": 17.4396923,
+          "lon": 78.4303319
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Krishnakanth Park",
+          "name:etymology:wikidata": "Q983744",
+          "name:te": "కృష్ణకాంత్ పార్కు",
+          "opening_hours": "Mo-Su 08:00-22:00",
+          "operator": "Greater Hyderabad Municipal Corporation",
+          "operator:short": "GHMC",
+          "operator:type": "government",
+          "operator:wikidata": "Q5259597"
+        }
+      },
+      {
+        "type": "way",
+        "id": 165302486,
+        "center": {
+          "lat": 17.4471181,
+          "lon": 78.3932459
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Ayyappa Society Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 250707220,
+        "center": {
+          "lat": 17.4289115,
+          "lon": 78.4152467
+        },
+        "tags": {
+          "landuse": "grass",
+          "leisure": "recreation_ground"
+        }
+      },
+      {
+        "type": "way",
+        "id": 250707222,
+        "center": {
+          "lat": 17.4268028,
+          "lon": 78.4159936
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 265617186,
+        "center": {
+          "lat": 17.4485315,
+          "lon": 78.4250933
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 265617198,
+        "center": {
+          "lat": 17.4473428,
+          "lon": 78.4252491
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 282201139,
+        "center": {
+          "lat": 17.4297378,
+          "lon": 78.4201701
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 311079962,
+        "center": {
+          "lat": 17.438764,
+          "lon": 78.4083942
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Butterfly park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097749,
+        "center": {
+          "lat": 17.4112765,
+          "lon": 78.4078999
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097758,
+        "center": {
+          "lat": 17.4393074,
+          "lon": 78.3995702
+        },
+        "tags": {
+          "craft": "dressmaker",
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097763,
+        "center": {
+          "lat": 17.4283965,
+          "lon": 78.4037218
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097769,
+        "center": {
+          "lat": 17.4274191,
+          "lon": 78.4034776
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097770,
+        "center": {
+          "lat": 17.4210345,
+          "lon": 78.4088987
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097775,
+        "center": {
+          "lat": 17.4127407,
+          "lon": 78.4056687
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097777,
+        "center": {
+          "lat": 17.4129077,
+          "lon": 78.4062272
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097779,
+        "center": {
+          "lat": 17.4196335,
+          "lon": 78.4106943
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097787,
+        "center": {
+          "lat": 17.4349184,
+          "lon": 78.4006121
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097791,
+        "center": {
+          "lat": 17.432987,
+          "lon": 78.3989578
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097794,
+        "center": {
+          "lat": 17.4292105,
+          "lon": 78.407451
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097803,
+        "center": {
+          "lat": 17.4238541,
+          "lon": 78.4012851
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097811,
+        "center": {
+          "lat": 17.4477272,
+          "lon": 78.4268039
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097812,
+        "center": {
+          "lat": 17.4119677,
+          "lon": 78.4047887
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097819,
+        "center": {
+          "lat": 17.4120543,
+          "lon": 78.4053496
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097823,
+        "center": {
+          "lat": 17.4204071,
+          "lon": 78.4109502
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097828,
+        "center": {
+          "lat": 17.4128756,
+          "lon": 78.4066633
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097838,
+        "center": {
+          "lat": 17.4125102,
+          "lon": 78.402512
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097846,
+        "center": {
+          "lat": 17.4219868,
+          "lon": 78.4035715
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097856,
+        "center": {
+          "lat": 17.4109001,
+          "lon": 78.4081144
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 332097858,
+        "center": {
+          "lat": 17.4209494,
+          "lon": 78.4046963
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356233723,
+        "center": {
+          "lat": 17.4169419,
+          "lon": 78.416083
+        },
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Starbucks",
+          "brand:wikidata": "Q37158",
+          "building": "yes",
+          "cuisine": "coffee_shop",
+          "name": "Starbucks",
+          "official_name": "Starbucks Coffee",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356233926,
+        "center": {
+          "lat": 17.4296131,
+          "lon": 78.4127018
+        },
+        "tags": {
+          "amenity": "cafe",
+          "building": "yes",
+          "internet_access": "wlan",
+          "name": "Beyond Coffee"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356234404,
+        "center": {
+          "lat": 17.4282211,
+          "lon": 78.4164923
+        },
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Road No.1, Jubliee Hills checkpost",
+          "addr:place": "Jubilee Hills",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "building": "yes",
+          "contact:mobile": "09849691315; 09849756785",
+          "email": "admin.ccfonline@gmail.com",
+          "healthcare": "blood_bank",
+          "name": "Chiranjeevi Blood Bank",
+          "opening_hours": "24/7",
+          "operator": "Charity",
+          "phone": "04023555005; 04023554849",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356234447,
+        "center": {
+          "lat": 17.4300646,
+          "lon": 78.4177907
+        },
+        "tags": {
+          "amenity": "cafe",
+          "building": "yes",
+          "name": "Le Vantage Cafe Bar"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356234454,
+        "center": {
+          "lat": 17.4307944,
+          "lon": 78.4172096
+        },
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "DR SHARATH CHANDRA"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356234494,
+        "center": {
+          "lat": 17.4164192,
+          "lon": 78.4175575
+        },
+        "tags": {
+          "amenity": "hospital",
+          "building": "yes",
+          "healthcare": "hospital",
+          "name": "Appolo Cradle Hospital"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356244517,
+        "center": {
+          "lat": 17.4358029,
+          "lon": 78.3955917
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356261664,
+        "center": {
+          "lat": 17.4307215,
+          "lon": 78.4242797
+        },
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:housenumber": "49",
+          "addr:postcode": "500045",
+          "addr:street": "Road no 2, Jubilee Hills",
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Lakshmi Narayana Speciality Clinics",
+          "website": "https://www.facebook.com/lnsclinics"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356261668,
+        "center": {
+          "lat": 17.4238037,
+          "lon": 78.4257619
+        },
+        "tags": {
+          "addr:full": "D.No: 8-2-269/H/191/A/1, NTR Trust Bhavan, Road No. 2, Banjara Hills",
+          "building": "yes",
+          "healthcare": "blood_bank",
+          "name": "NTR Trust Blood Bank",
+          "source": "OpenGovernmentData"
+        }
+      },
+      {
+        "type": "way",
+        "id": 356271386,
+        "center": {
+          "lat": 17.4135898,
+          "lon": 78.4240188
+        },
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot No: 8-2-293/82/L/276A, MLA Colony Main Raod, Road No 12, Banjara Hills",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "building": "yes",
+          "contact:mobile": "+91 9160900045; 040-23551034",
+          "email": "info@omegahospitals.com",
+          "fax": "040 23550327",
+          "healthcare:speciality": "Cancer Subspecialities;General Health Institute;Womens Wellcare Institute;ENT Institute;Orthopaedic Outreach Institute;Omega Cosmetic Surgery Center",
+          "medical_system": "Allopathic",
+          "name": "Omega Hospital",
+          "operator:type": "private",
+          "source": "OpenGovernmentData",
+          "website": "https://www.omegahospitals.com/"
+        }
+      },
+      {
+        "type": "way",
+        "id": 360462644,
+        "center": {
+          "lat": 17.4364458,
+          "lon": 78.3919929
+        },
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:full": "H.No. 138, Doctors Colony Road, Kavuri Hills, Madhapur, Hyderabad-500081",
+          "addr:housenumber": "138",
+          "addr:postcode": "500081",
+          "addr:street": "Doctors Colony Road",
+          "amenity": "cafe",
+          "building": "commercial",
+          "internet_access": "yes",
+          "internet_access:fee": "no",
+          "name": "Lush Cafe | By the Lake",
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "outdoor_seating": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361503890,
+        "center": {
+          "lat": 17.4149943,
+          "lon": 78.4266541
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361505563,
+        "center": {
+          "lat": 17.4160944,
+          "lon": 78.4182122
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361505564,
+        "center": {
+          "lat": 17.415712,
+          "lon": 78.4188604
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361505565,
+        "center": {
+          "lat": 17.4141281,
+          "lon": 78.3971217
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361505566,
+        "center": {
+          "lat": 17.413821,
+          "lon": 78.3983036
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361506609,
+        "center": {
+          "lat": 17.41106,
+          "lon": 78.4020422
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361506610,
+        "center": {
+          "lat": 17.4107523,
+          "lon": 78.4027605
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361555698,
+        "center": {
+          "lat": 17.4392418,
+          "lon": 78.4137649
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361685060,
+        "center": {
+          "lat": 17.4138653,
+          "lon": 78.4202571
+        },
+        "tags": {
+          "name": "Lotus Pond",
+          "natural": "water",
+          "water": "pond"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361720515,
+        "center": {
+          "lat": 17.4357481,
+          "lon": 78.4113129
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Jubilee Hills Urban Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 361720516,
+        "center": {
+          "lat": 17.4326082,
+          "lon": 78.4056027
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Muncipal Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010487,
+        "center": {
+          "lat": 17.4294997,
+          "lon": 78.3972328
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010497,
+        "center": {
+          "lat": 17.4259825,
+          "lon": 78.4009238
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "GHMC HUDA Park",
+          "operator": "Greater Hyderabad Municipal Corporation",
+          "operator:short": "GHMC",
+          "operator:type": "government",
+          "operator:wikidata": "Q5259597"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010498,
+        "center": {
+          "lat": 17.4149853,
+          "lon": 78.3972936
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010499,
+        "center": {
+          "lat": 17.4148006,
+          "lon": 78.397233
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010500,
+        "center": {
+          "lat": 17.4128818,
+          "lon": 78.3896533
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362010501,
+        "center": {
+          "lat": 17.4368242,
+          "lon": 78.3899612
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362700826,
+        "center": {
+          "lat": 17.4468977,
+          "lon": 78.4287394
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 362710670,
+        "center": {
+          "lat": 17.4418049,
+          "lon": 78.413404
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 437412060,
+        "center": {
+          "lat": 17.4184087,
+          "lon": 78.4108919
+        },
+        "tags": {
+          "leisure": "playground"
+        }
+      },
+      {
+        "type": "way",
+        "id": 437412061,
+        "center": {
+          "lat": 17.4192716,
+          "lon": 78.4093444
+        },
+        "tags": {
+          "amenity": "school",
+          "leisure": "playground"
+        }
+      },
+      {
+        "type": "way",
+        "id": 515411914,
+        "center": {
+          "lat": 17.4443863,
+          "lon": 78.4158377
+        },
+        "tags": {
+          "addr:city": "yusufguda",
+          "addr:housenumber": "POLICE LINES",
+          "addr:postcode": "500045",
+          "addr:street": "HILL TOP QUARTERS",
+          "description": "Park for recration and spending quality time.",
+          "leisure": "park",
+          "name": "Hill Top Lake Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 568973277,
+        "center": {
+          "lat": 17.4470322,
+          "lon": 78.3910061
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Ayyappa Society Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 625016048,
+        "center": {
+          "lat": 17.4396107,
+          "lon": 78.3904962
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 645761794,
+        "center": {
+          "lat": 17.4249589,
+          "lon": 78.426676
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 660771331,
+        "center": {
+          "lat": 17.4246754,
+          "lon": 78.4275696
+        },
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Kallam Anji Reddy Campus, L V Prasad Marg, Opp. PVR Cinemas, Banjara Hills",
+          "addr:postcode": "500034",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "email": "communications@lvpei.org",
+          "emergency_telephone_code": "040 30612100;09347573377",
+          "healthcare": "hospital",
+          "healthcare:speciality": "ophthalmology",
+          "medical_system": "Allopathic",
+          "name": "L V Prasad Eye Institute",
+          "name:etymology:wikidata": "Q6456668",
+          "operator:type": "private",
+          "phone": "040 30612345;040 39892020",
+          "source": "OpenGovernmentData",
+          "website": "https://www.lvpei.org/",
+          "wikidata": "Q6456669",
+          "wikimedia_commons": "Category:L. V. Prasad Eye Institute",
+          "wikipedia": "en:L. V. Prasad Eye Institute"
+        }
+      },
+      {
+        "type": "way",
+        "id": 680822496,
+        "center": {
+          "lat": 17.4364894,
+          "lon": 78.3986848
+        },
+        "tags": {
+          "leisure": "park",
+          "natural": "tree_row"
+        }
+      },
+      {
+        "type": "way",
+        "id": 701033132,
+        "center": {
+          "lat": 17.4428133,
+          "lon": 78.4126404
+        },
+        "tags": {
+          "leisure": "playground"
+        }
+      },
+      {
+        "type": "way",
+        "id": 740791127,
+        "center": {
+          "lat": 17.4357861,
+          "lon": 78.4289251
+        },
+        "tags": {
+          "access": "permit",
+          "leisure": "playground",
+          "name": "Mahmood Football Coaching Centre"
+        }
+      },
+      {
+        "type": "way",
+        "id": 817206424,
+        "center": {
+          "lat": 17.4227195,
+          "lon": 78.4043989
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 817206425,
+        "center": {
+          "lat": 17.4216258,
+          "lon": 78.4021323
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 860344899,
+        "center": {
+          "lat": 17.4149895,
+          "lon": 78.413651
+        },
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Apollo Hospitals, Jubilee Hills",
+          "addr:postcode": "500033",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "barrier": "wall",
+          "contact:email": "apollohealthcityhyd@apollohospitals.com",
+          "contact:tollfree": "18605001066",
+          "email": "apollohealthcity@apollohospitals.com",
+          "emergency": "yes",
+          "fax": "040 23608050",
+          "health_facility:type": "Inpatient;Accommodation;Food and Beverage Services;International Patient Services;24 hours pharmacy services;Blood Bank;Ambulance Service;Cafeteria",
+          "healthcare": "hospital",
+          "healthcare:speciality": "multi speciality",
+          "landuse": "hospital",
+          "medical_system": "Allopathic",
+          "name": "Apollo Hospitals",
+          "operator": "Apollo Hospitals",
+          "operator:type": "private",
+          "operator:wikidata": "Q4780321",
+          "phone": "040 23607777;040 23605555;040 23602000",
+          "source": "OpenGovernmentData",
+          "website": "https://www.apollohospitals.com",
+          "wheelchair": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 960681063,
+        "center": {
+          "lat": 17.4318042,
+          "lon": 78.4146938
+        },
+        "tags": {
+          "amenity": "cafe",
+          "building": "yes",
+          "name": "Theory Cafe & Desert Bar"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1113328958,
+        "center": {
+          "lat": 17.4231883,
+          "lon": 78.408259
+        },
+        "tags": {
+          "leisure": "playground"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1446699003,
+        "center": {
+          "lat": 17.416844,
+          "lon": 78.4164914
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1451064959,
+        "center": {
+          "lat": 17.4372141,
+          "lon": 78.3889459
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "relation",
+        "id": 1988399,
+        "center": {
+          "lat": 17.4170331,
+          "lon": 78.3862898
+        },
+        "tags": {
+          "name": "Malakam Cheruvu",
+          "natural": "water",
+          "source:position": "Bing Imagery 2011",
+          "source:tracer": "scanaerial",
+          "source:zoomlevel": "17",
+          "type": "multipolygon",
+          "water": "pond"
+        }
+      },
+      {
+        "type": "relation",
+        "id": 11769747,
+        "center": {
+          "lat": 17.4175222,
+          "lon": 78.4182329
+        },
+        "tags": {
+          "name": "Chiraan Kunta",
+          "natural": "water",
+          "type": "multipolygon",
+          "water": "pond"
+        }
+      }
+    ]
+  }
+}

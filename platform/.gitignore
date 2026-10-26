@@ -1,0 +1,9 @@
+.env
+.env.*
+.secrets/
+backups/
+database/
+media/
+node_modules/
+dist/
+.local-originals/

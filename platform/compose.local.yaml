@@ -1,0 +1,11 @@
+# Local development only. Never add this override on a public VPS.
+services:
+  api:
+    ports: ["127.0.0.1:3000:3000"]
+  db:
+    ports: ["127.0.0.1:54329:5432"]
+    networks: [backend, development]
+  caddy:
+    profiles: [https]
+networks:
+  development: {}

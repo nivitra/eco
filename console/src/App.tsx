@@ -13,6 +13,7 @@ import {
   Home,
   Image,
   Layers,
+  TicketPercent,
   LogOut,
   MapPin,
   Menu,
@@ -35,15 +36,18 @@ import { Button, Panel, Field, Status, Empty, CheckLine, External } from './ui';
 import { Facts, Offerings, Hours } from './facts';
 import { Website } from './website';
 import { Photos, Team, Billing, Settings, Visibility } from './manage';
-import { useFactDraft } from './useFactDraft';
+import { useFactDraft, validateFactProfile } from './useFactDraft';
 import { Recovery } from './Recovery';
 import { actionSuccess } from './action-feedback';
 import { MapEditor } from './maps/MapEditor';
+import { AdminPage } from './Admin';
+import { Coupons } from './Coupons';
 const navigation = [
   ['home', 'Overview', Home],
   ['details', 'Business details', Building2],
   ['hours', 'Opening hours', Clock3],
   ['offerings', 'Products & services', Layers],
+  ['coupons', 'Coupons', TicketPercent],
   ['website', 'Website', Globe],
   ['photos', 'Photos & evidence', Image],
   ['arrival', 'Entrance & directions', MapPin],
@@ -53,6 +57,19 @@ const navigation = [
   ['billing', 'Plan & billing', CreditCard],
   ['settings', 'Settings & help', Settings2],
 ] as const;
+const locationPageDescriptions: Record<string, string> = {
+  details: 'Add or claim a location to manage its business name, address and contact details.',
+  hours: 'Add or claim a location to set its opening hours.',
+  offerings: 'Add or claim a location to describe its products and services.',
+  coupons: 'Add or claim a location to create and manage coupons.',
+  website: 'Add or claim a location to connect and manage its website.',
+  photos: 'Add or claim a location before uploading business photos and evidence.',
+  arrival: 'Add or claim a location to create entrance and direction guidance.',
+  review: 'Add or claim a location before reviewing and publishing its facts.',
+  visibility: 'Add or claim a location to see its measured discovery activity.',
+};
+const demoClaimEvidence =
+  'DEMO SUBMISSION ONLY: This is a local workflow test. No ownership of this business is asserted. Do not approve this claim.';
 function Brand() {
   return (
     <div className="brand">
@@ -63,6 +80,21 @@ function Brand() {
         kulture<span className="brand-dot">.</span>
         <small>BUSINESS</small>
       </span>
+    </div>
+  );
+}
+function SectionHeading({
+  screen,
+  description,
+}: {
+  screen: string;
+  description?: string;
+}) {
+  return (
+    <div className="page-heading">
+      <span className="eyebrow">YOUR WORKSPACE</span>
+      <h1>{navigation.find((n) => n[0] === screen)?.[1]}</h1>
+      {description && <p>{description}</p>}
     </div>
   );
 }
@@ -233,10 +265,36 @@ function Onboarding({
     [query, setQuery] = useState(''),
     [results, setResults] = useState<any[]>([]),
     [searchedQuery, setSearchedQuery] = useState<string | null>(null),
+    [nextOffset, setNextOffset] = useState<number | null>(null),
     [selected, setSelected] = useState<any>(null),
     [evidence, setEvidence] = useState(''),
+    [evidenceURL, setEvidenceURL] = useState(''),
+    [claimAttempted, setClaimAttempted] = useState(false),
     [profile, setProfile] = useState<Profile>(structuredClone(emptyProfile)),
-    [duplicate, setDuplicate] = useState(false);
+    [duplicate, setDuplicate] = useState(false),
+    [createAttempted, setCreateAttempted] = useState(false);
+  const createIssues = validateFactProfile(profile);
+  const localDemo = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const submitClaim = (demo: boolean) => {
+    if (!selected) return;
+    if (!demo) {
+      setClaimAttempted(true);
+      if (evidence.trim().length < 30) return;
+    }
+    void run(demo ? 'Submit demo claim' : 'Submit ownership claim', async () => {
+      await api(`/v1/tenants/${tenant.id}/claims`, {
+        method: 'POST',
+        body: {
+          placeID: selected.id,
+          evidence: {
+            description: demo ? demoClaimEvidence : evidence.trim(),
+            ...(!demo && evidenceURL.trim() ? { url: evidenceURL.trim() } : {}),
+          },
+        },
+      });
+      onCreated(selected.id);
+    });
+  };
   return (
     <>
       <div className="page-heading">
@@ -261,8 +319,10 @@ function Onboarding({
               run('Search locations', async () => {
                 const requestedQuery = query.trim();
                 const r = await api('/v1/locations/search?q=' + encodeURIComponent(requestedQuery));
-                setResults(r.places);
+                setResults(r.places ?? []);
+                setNextOffset(r.nextOffset ?? null);
                 setSelected(null);
+                setClaimAttempted(false);
                 setSearchedQuery(requestedQuery);
               });
             }}
@@ -274,27 +334,45 @@ function Onboarding({
                 onChange={(e) => {
                   setQuery(e.target.value);
                   setSelected(null);
+                  setClaimAttempted(false);
+                  setSearchedQuery(null);
+                  setNextOffset(null);
                 }}
                 required
                 placeholder="Business name, locality or address"
                 minLength={2}
               />
             </div>
-            <Button type="submit" busy={busy === 'Search locations'}>
+            <Button
+              type="submit"
+              disabled={query.trim().length < 2}
+              busy={busy === 'Search locations'}
+            >
               Search
             </Button>
           </form>
+          <p className="hint">
+            Search the current Kulture catalog by business name, locality or address. If your
+            branch is not listed, create a private location for review.
+          </p>
           {searchedQuery === query.trim() && results.length === 0 && (
-            <p className="notice" role="status">
-              No matching locations found. Try another name or address, or choose Create a new
-              location.
-            </p>
+            <div className="notice" role="status">
+              <p>No matching locations found. Try another name or address.</p>
+              <Button variant="secondary" onClick={() => setMode('new')}>
+                Create a new location
+              </Button>
+            </div>
           )}
           {(searchedQuery === query.trim() ? results : []).map((p) => (
             <button
               className={`place-result ${selected?.id === p.id ? 'selected' : ''}`}
               key={p.id}
-              onClick={() => setSelected(p)}
+              onClick={() => {
+                setSelected(p);
+                setEvidence('');
+                setEvidenceURL('');
+                setClaimAttempted(false);
+              }}
             >
               <MapPin size={19} />
               <div>
@@ -306,12 +384,36 @@ function Onboarding({
               {selected?.id === p.id && <Check size={18} />}
             </button>
           ))}
+          {searchedQuery === query.trim() && nextOffset !== null && (
+            <Button
+              variant="secondary"
+              busy={busy === 'Load more locations'}
+              onClick={() =>
+                run('Load more locations', async () => {
+                  const requestedQuery = query.trim();
+                  const r = await api(
+                    '/v1/locations/search?q=' +
+                      encodeURIComponent(requestedQuery) +
+                      '&offset=' +
+                      nextOffset,
+                  );
+                  setResults((current) => {
+                    const existing = new Set(current.map((place) => place.id));
+                    return [...current, ...(r.places ?? []).filter((place: any) => !existing.has(place.id))];
+                  });
+                  setNextOffset(r.nextOffset ?? null);
+                })
+              }
+            >
+              Show more matches
+            </Button>
+          )}
           {selected && (
             <div className="claim-form">
               <h3>Claim {selected.name}</h3>
               <Field
                 label="How can we confirm your authority?"
-                hint="Explain your role and provide an independently checkable business contact or official website. Do not paste identity numbers."
+                hint={`Explain your role and provide an independently checkable business contact or official website. At least 30 characters (${evidence.trim().length}/30). Do not paste identity numbers.`}
               >
                 <textarea
                   value={evidence}
@@ -320,21 +422,48 @@ function Onboarding({
                   minLength={30}
                 />
               </Field>
-              <Button
-                disabled={evidence.length < 30}
-                busy={busy === 'Submit ownership claim'}
-                onClick={() =>
-                  run('Submit ownership claim', async () => {
-                    await api(`/v1/tenants/${tenant.id}/claims`, {
-                      method: 'POST',
-                      body: { placeID: selected.id, evidence: { description: evidence } },
-                    });
-                    onCreated(selected.id);
-                  })
-                }
+              <Field
+                label="Official website or business profile URL (optional)"
+                hint="A public page tied to this exact branch can help the operator review your claim."
               >
-                Submit for review
-              </Button>
+                <input
+                  type="url"
+                  value={evidenceURL}
+                  onChange={(e) => setEvidenceURL(e.target.value)}
+                  placeholder="https://example.com/your-branch"
+                />
+              </Field>
+              {claimAttempted && evidence.trim().length < 30 && (
+                <p className="notice" role="alert">
+                  Enter at least 30 characters explaining your authority, or use the local demo
+                  submission for testing.
+                </p>
+              )}
+              <div className="actions">
+                <Button
+                  busy={busy === 'Submit ownership claim'}
+                  disabled={!!busy}
+                  onClick={() => submitClaim(false)}
+                >
+                  Submit for review
+                </Button>
+                {localDemo && (
+                  <Button
+                    variant="secondary"
+                    busy={busy === 'Submit demo claim'}
+                    disabled={!!busy}
+                    onClick={() => submitClaim(true)}
+                  >
+                    Demo submission
+                  </Button>
+                )}
+              </div>
+              {localDemo && (
+                <p className="hint">
+                  Demo submission sends a clearly marked test claim for this selected branch. It
+                  stays pending and does not verify ownership.
+                </p>
+              )}
             </div>
           )}
         </Panel>
@@ -357,22 +486,38 @@ function Onboarding({
               This starts a private draft. It is not public until ownership, facts, publication
               rights and the exact preview are approved.
             </p>
+            {createAttempted && (createIssues.length > 0 || evidence.trim().length < 30) && (
+              <div className="notice" role="alert">
+                <strong>Complete these details before creating the private draft</strong>
+                <ul>
+                  {evidence.trim().length < 30 && (
+                    <li>Ownership explanation: enter at least 30 characters.</li>
+                  )}
+                  {createIssues.slice(0, 8).map((issue, index) => (
+                    <li key={`${issue.path}-${index}`}>
+                      {issue.path}: {issue.message}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <Button
-              disabled={evidence.length < 30 || !profile.name}
               busy={busy === 'Create location'}
-              onClick={() =>
-                run('Create location', async () => {
+              onClick={() => {
+                setCreateAttempted(true);
+                if (createIssues.length > 0 || evidence.trim().length < 30) return;
+                void run('Create location', async () => {
                   const r = await api(`/v1/tenants/${tenant.id}/locations`, {
                     method: 'POST',
                     body: {
                       profile,
-                      evidence: { description: evidence },
+                      evidence: { description: evidence.trim() },
                       duplicateAcknowledged: duplicate,
                     },
                   });
                   onCreated(r.place.id);
-                })
-              }
+                });
+              }}
             >
               Create private location draft
               <ArrowRight size={16} />
@@ -557,7 +702,7 @@ function Overview({
     </>
   );
 }
-export default function App() {
+function BusinessApp() {
   const [resetToken, setResetToken] = useState(() =>
     new URLSearchParams(location.search).get('token'),
   );
@@ -617,12 +762,29 @@ export default function App() {
   useEffect(() => {
     loadMe();
   }, [loadMe]);
+  useEffect(() => {
+    const onPopState = () => {
+      const wanted = new URLSearchParams(location.search).get('section');
+      setScreen(navigation.some((n) => n[0] === wanted) ? wanted! : 'home');
+      setNewLocation(false);
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
   const tenant: Tenant | undefined = me?.tenants.find((t: Tenant) => t.id === tenantID),
     types = useResource('/v1/business-taxonomy'),
     capabilities = useResource('/v1/capabilities'),
     places = useResource(tenant ? `/v1/tenants/${tenant.id}/places` : null),
     base = tenant && placeID ? `/v1/tenants/${tenant.id}/places/${placeID}` : '',
     detail = useResource(base || null, true);
+  useEffect(() => {
+    if (tenant && tenant.role !== 'owner' && (screen === 'team' || screen === 'billing')) {
+      setScreen('home');
+      const url = new URL(location.href);
+      url.searchParams.delete('section');
+      history.replaceState(null, '', url);
+    }
+  }, [tenant, screen]);
   useEffect(() => {
     if (places.data?.places) {
       setPlaceID((id) => {
@@ -644,7 +806,7 @@ export default function App() {
       me && tenant && placeID ? `${location.origin}|${me.user.id}|${tenant.id}|${placeID}` : null,
     detail: detail.data,
     base,
-    enabled: canEdit && detail.data?.claim?.state === 'approved',
+    enabled: canEdit && detail.data?.canEditDraft === true,
     onError: (e) => setError({ message: e.message, code: (e as APIError).code }),
     onSaved: () => {
       detail.reload();
@@ -668,13 +830,25 @@ export default function App() {
   }, [success]);
   const setFacts = (p: Profile) => facts.setProfile(p),
     go = (s: string) => {
+      if (s !== screen) {
+        const url = new URL(location.href);
+        if (s === 'home') url.searchParams.delete('section');
+        else url.searchParams.set('section', s);
+        history.pushState(null, '', url);
+      }
       setScreen(s);
+      setNewLocation(false);
       setMobileMenu(false);
     },
     changeLocation = async (id: string) => {
       if (dirty && !confirm('Keep unsynced edits in local recovery and switch locations?')) return;
       setPlaceID(id);
       setNewLocation(false);
+    },
+    startAddingLocation = () => {
+      if (!dirty || confirm('Keep unsynced edits in local recovery and add a location?')) {
+        setNewLocation(true);
+      }
     },
     onCreated = (id: string) => {
       setPlaceID(id);
@@ -902,14 +1076,7 @@ export default function App() {
                   <Button
                     variant="secondary"
                     aria-label="Add location"
-                    onClick={() => {
-                      if (
-                        !dirty ||
-                        confirm('Keep unsynced edits in local recovery and add a location?')
-                      ) {
-                        setNewLocation(true);
-                      }
-                    }}
+                    onClick={startAddingLocation}
                   >
                     <Plus size={15} />
                     <span>Add location</span>
@@ -962,7 +1129,7 @@ export default function App() {
                 </div>
               )}
               {places.error && <p className="notice">{places.error}</p>}
-              {newLocation || (!placeID && !places.loading) ? (
+              {newLocation ? (
                 <Onboarding
                   tenant={tenant}
                   types={types.data?.types ?? []}
@@ -970,22 +1137,108 @@ export default function App() {
                   busy={busy}
                   onCreated={onCreated}
                 />
+              ) : screen === 'team' && tenant.role === 'owner' ? (
+                <>
+                  <SectionHeading
+                    screen={screen}
+                    description="Manage workspace members and the locations they can access."
+                  />
+                  <Team
+                    tenant={tenant}
+                    places={places.data?.places ?? []}
+                    run={run}
+                    busy={busy}
+                  />
+                </>
+              ) : screen === 'billing' && tenant.role === 'owner' ? (
+                <>
+                  <SectionHeading
+                    screen={screen}
+                    description="Review your workspace billing history and location plans."
+                  />
+                  <Billing tenantID={tenant.id} placeID={placeID} run={run} busy={busy} />
+                </>
+              ) : screen === 'settings' ? (
+                <>
+                  <SectionHeading
+                    screen={screen}
+                    description="Manage account preferences, request help and export location data."
+                  />
+                  <Settings
+                    tenantID={tenant.id}
+                    placeID={placeID}
+                    base={base}
+                    run={run}
+                    busy={busy}
+                    places={places.data?.places ?? []}
+                    onSelectPlace={(id) => void changeLocation(id)}
+                    onEditPlace={() => go('details')}
+                    onAddPlace={tenant.role === 'owner' ? startAddingLocation : undefined}
+                  />
+                </>
+              ) : !placeID ? (
+                places.loading || !!places.data?.places?.length ? (
+                  <div className="section-loading">
+                    <LoaderCircle className="spin" size={23} />
+                    <p>Loading workspace locations…</p>
+                  </div>
+                ) : places.error ? (
+                  <>
+                    <SectionHeading screen={screen} />
+                    <Empty
+                      title="Locations could not be loaded"
+                      action={<Button onClick={places.reload}>Retry loading locations</Button>}
+                    >
+                      Retry to restore your workspace locations.
+                    </Empty>
+                  </>
+                ) : screen === 'home' && tenant.role === 'owner' ? (
+                  <Onboarding
+                    tenant={tenant}
+                    types={types.data?.types ?? []}
+                    run={run}
+                    busy={busy}
+                    onCreated={onCreated}
+                  />
+                ) : (
+                  <>
+                    <SectionHeading
+                      screen={screen}
+                      description={locationPageDescriptions[screen]}
+                    />
+                    <Empty
+                      title={tenant.role === 'owner' ? 'Add your first location' : 'No location assigned'}
+                      action={
+                        tenant.role === 'owner' ? (
+                          <Button onClick={() => setNewLocation(true)}>Add your business</Button>
+                        ) : undefined
+                      }
+                    >
+                      {tenant.role === 'owner'
+                        ? 'Search for an existing business or create a private location draft to use this page.'
+                        : 'Ask your workspace owner to add or assign a location.'}
+                    </Empty>
+                  </>
+                )
               ) : !detail.data ? (
-                <div className="section-loading">
-                  {detail.error ? (
-                    <>
+                <>
+                  <SectionHeading screen={screen} />
+                  <div className="section-loading">
+                    {detail.error ? (
+                      <>
                       <p className="notice">{detail.error}</p>
                       <Button onClick={detail.reload} variant="secondary">
                         Retry
                       </Button>
-                    </>
-                  ) : (
-                    <>
+                      </>
+                    ) : (
+                      <>
                       <LoaderCircle className="spin" size={23} />
                       <p>Loading location…</p>
-                    </>
-                  )}
-                </div>
+                      </>
+                    )}
+                  </div>
+                </>
               ) : (
                 <>
                   {screen !== 'home' && (
@@ -1088,8 +1341,10 @@ export default function App() {
                       </div>
                       {detail.data.claim.state !== 'approved' && (
                         <div className="notice">
-                          Ownership review is {detail.data.claim.state}. Publishing and edits
-                          require an approved claim.
+                          Ownership review is {detail.data.claim.state}.{' '}
+                          {detail.data.canEditDraft
+                            ? 'Your edits stay private. Publishing requires an approved claim.'
+                            : 'Editing and publishing require an approved claim.'}
                           {detail.data.claim.reviewReason && ' ' + detail.data.claim.reviewReason}
                         </div>
                       )}
@@ -1120,6 +1375,7 @@ export default function App() {
                         />
                       ) : (
                         <Offerings
+                          base={base}
                           profile={profile}
                           onChange={setFacts}
                           readOnly={facts.blocked || !!busy}
@@ -1139,6 +1395,7 @@ export default function App() {
                       </Panel>
                     </>
                   )}
+                  {screen === 'coupons' && profile && <Coupons key={base} base={base} profile={profile} dirty={dirty} readOnly={!canEdit || facts.blocked} onSaveDraft={save} onEditOfferings={() => go('offerings')} />}
                   {(screen === 'website' || screen === 'review') &&
                     (dirty || facts.recovery || facts.conflict ? (
                       <Panel title="Save before reviewing">
@@ -1170,6 +1427,16 @@ export default function App() {
                           </p>
                         )}
                       </Panel>
+                    ) : detail.data.claim.state !== 'approved' ? (
+                      <Panel title="Website review follows ownership review">
+                        <p>
+                          You can edit and save your private business details now. Website preview
+                          and publishing open after the ownership claim is approved.
+                        </p>
+                        <Button variant="secondary" onClick={() => go('details')}>
+                          Edit private business details
+                        </Button>
+                      </Panel>
                     ) : (
                       <Website
                         base={base}
@@ -1185,16 +1452,22 @@ export default function App() {
                         review={screen === 'review'}
                       />
                     ))}
-                  {screen === 'photos' && (
-                    <Photos
-                      base={base}
-                      tenantID={tenant.id}
-                      placeID={placeID}
-                      run={run}
-                      busy={busy}
-                      canPublish={canPublish}
-                    />
-                  )}{' '}
+                  {screen === 'photos' &&
+                    (detail.data.claim.state === 'approved' ? (
+                      <Photos
+                        base={base}
+                        tenantID={tenant.id}
+                        placeID={placeID}
+                        run={run}
+                        busy={busy}
+                        canPublish={canPublish}
+                      />
+                    ) : (
+                      <Empty title="Photos follow ownership review">
+                        Save your private business details now. Photo uploads open after your claim
+                        is approved.
+                      </Empty>
+                    ))}{' '}
                   {screen === 'arrival' &&
                     (detail.data.claim.state === 'approved' ? (
                       <MapEditor
@@ -1209,27 +1482,7 @@ export default function App() {
                         photos, floors and directions.
                       </Empty>
                     ))}{' '}
-                  {screen === 'visibility' && <Visibility base={base} />}{' '}
-                  {screen === 'team' && tenant.role === 'owner' && (
-                    <Team
-                      tenant={tenant}
-                      places={places.data?.places ?? []}
-                      run={run}
-                      busy={busy}
-                    />
-                  )}{' '}
-                  {screen === 'billing' && tenant.role === 'owner' && (
-                    <Billing tenantID={tenant.id} placeID={placeID} run={run} busy={busy} />
-                  )}{' '}
-                  {screen === 'settings' && (
-                    <Settings
-                      tenantID={tenant.id}
-                      placeID={placeID}
-                      base={base}
-                      run={run}
-                      busy={busy}
-                    />
-                  )}
+                  {screen === 'visibility' && <Visibility base={base} approved={detail.data.claim.state === 'approved'} onEdit={() => go('details')} onPublish={() => go('review')} places={places.data?.places ?? []} placeID={placeID} onSelectPlace={(id) => void changeLocation(id)} />}{' '}
                 </>
               )}
               <footer className="page-footer">
@@ -1268,5 +1521,12 @@ export default function App() {
         </div>
       )}
     </>
+  );
+}
+export default function App() {
+  return location.pathname === '/admin' || location.pathname === '/admin/' ? (
+    <AdminPage />
+  ) : (
+    <BusinessApp />
   );
 }

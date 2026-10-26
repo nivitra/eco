@@ -1,0 +1,63 @@
+name: VPS platform
+on:
+  push:
+    paths:
+      ['platform/**', 'console/**', '.github/workflows/platform.yml']
+  pull_request:
+    paths:
+      ['platform/**', 'console/**', '.github/workflows/platform.yml']
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: platform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24', cache: npm, cache-dependency-path: platform/package-lock.json }
+      - run: npm ci --ignore-scripts
+      - run: node node_modules/esbuild/install.js
+      - name: Build and test merchant console
+        run: |
+          npm --prefix ../console ci --ignore-scripts
+          node ../console/node_modules/esbuild/install.js
+          npm --prefix ../console test
+          npm --prefix ../console run build
+      - run: ./ops/setup.sh
+      - run: docker compose -f compose.yaml -f compose.local.yaml up --build -d db
+      - name: Build and run full stack
+        run: docker compose -f compose.yaml -f compose.local.yaml up --build -d api worker
+      - name: Validate HTTPS gateway
+        run: docker compose run --rm --no-deps caddy caddy validate --config /etc/caddy/Caddyfile
+      - name: Wait for readiness
+        run: |
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://localhost:3000/health/ready; then exit 0; fi
+            sleep 2
+          done
+          docker compose logs --no-color
+          exit 1
+      - name: Typecheck, unit and real database acceptance tests
+        run: |
+          docker compose stop worker
+          set -a
+          . ./.env
+          set +a
+          export DATABASE_URL="${DATABASE_URL/@db:5432/@127.0.0.1:54329}"
+          export AUTH_DATABASE_URL="${AUTH_DATABASE_URL/@db:5432/@127.0.0.1:54329}"
+          export WORKER_DATABASE_URL="${WORKER_DATABASE_URL/@db:5432/@127.0.0.1:54329}"
+          export INTERNAL_API=true RUN_DB_TESTS=true QUIET_LOGS=true
+          npm run check
+          npm test
+          docker compose start worker
+      - name: Backup and restore drill
+        run: |
+          ./ops/backup.sh
+          ./ops/backup.sh --journal-only
+          latest_journal="$(ls -t backups/*.retention.json | head -1)"
+          ./ops/restore-check.sh "$(ls -t backups/*.dump | head -1)" "$latest_journal" "${latest_journal%.json}.sha256"
+      - name: Container diagnostics
+        if: failure()
+        run: docker compose logs --no-color --tail 100

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Plus, Trash2 } from 'lucide-react';
 import { Button, Field, Panel, CheckLine } from './ui';
 import type { Profile } from './api';
+import { OfferingImport } from './OfferingImport';
 function ListField({
   values,
   separator,
@@ -181,7 +182,19 @@ export function Facts({
             />
           </Field>
           <Field label="Full address">
-            <input value={p.address} onChange={(e) => set('address', e.target.value)} />
+            <input
+              value={p.address}
+              onChange={(e) => {
+                const address = e.target.value;
+                onChange({
+                  ...p,
+                  address,
+                  ...(p.locality && (!p.locality.street || p.locality.street === p.address)
+                    ? { locality: { ...p.locality, street: address } }
+                    : {}),
+                });
+              }}
+            />
           </Field>
           <Field label="City">
             <input
@@ -319,10 +332,12 @@ export function Offerings({
   profile: p,
   onChange,
   readOnly = false,
+  base,
 }: {
   profile: Profile;
   onChange: (p: Profile) => void;
   readOnly?: boolean;
+  base: string;
 }) {
   const items = p.offerings ?? [],
     set = (v: any[]) => onChange({ ...p, offerings: v }),
@@ -357,6 +372,7 @@ export function Offerings({
           </Button>
         }
       >
+        <OfferingImport base={base} profile={p} onChange={onChange} readOnly={readOnly} />
         {!items.length && (
           <p className="muted">
             Add your menu, products or services. Each item will appear in the exact publication
@@ -374,6 +390,13 @@ export function Offerings({
                   value={o.category ?? ''}
                   onChange={(e) => edit(i, 'category', e.target.value || null)}
                 />
+              </Field>
+              <Field label="Offering type" hint="Used by coupons for all products or all services.">
+                <select value={o.kind ?? ''} onChange={(e) => edit(i, 'kind', e.target.value || undefined)}>
+                  <option value="">Choose product or service</option>
+                  <option value="product">Product</option>
+                  <option value="service">Service</option>
+                </select>
               </Field>
               <Field label="Price type">
                 <select

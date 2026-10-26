@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Upload, Trash2, Download, Check, Users, ExternalLink } from 'lucide-react';
+import { Plus, Upload, Trash2, Download, Check, Users, ExternalLink, RefreshCw, ArrowRight } from 'lucide-react';
 import { api, displayDate, downloadJSON, type Tenant } from './api';
 import { useResource, type Run } from './hooks';
 import { Button, Panel, Field, Status, Empty, CheckLine, External } from './ui';
@@ -260,6 +260,9 @@ export function Team({
         title="Invite a teammate"
         subtitle="The link expires in seven days and only works for the verified email you specify."
       >
+        {!places.length && (
+          <p className="notice">Add a location before inviting teammates to manage it.</p>
+        )}
         <div className="form-grid">
           <Field label="Recipient email">
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -388,13 +391,17 @@ export function Billing({
   busy: string;
 }) {
   const billing = useResource(`/v1/tenants/${tenantID}/billing`),
-    entitlement = useResource(`/v1/tenants/${tenantID}/places/${placeID}/entitlement`),
-    destinations = useResource(`/v1/tenants/${tenantID}/places/${placeID}/destinations`),
+    entitlement = useResource(
+      placeID ? `/v1/tenants/${tenantID}/places/${placeID}/entitlement` : null,
+    ),
+    destinations = useResource(
+      placeID ? `/v1/tenants/${tenantID}/places/${placeID}/destinations` : null,
+    ),
     [terms, setTerms] = useState(false),
     [destinationID, setDestinationID] = useState('');
   const b = billing.data,
     e = entitlement.data?.capabilities.publish,
-    subs = b?.subscriptions?.filter((s: any) => s.placeID === placeID) ?? [];
+    subs = b?.subscriptions?.filter((s: any) => !placeID || s.placeID === placeID) ?? [];
   return (
     <>
       <div className="plan-hero">
@@ -416,6 +423,8 @@ export function Billing({
           <small>Total monthly checkout amount</small>
         </div>
       </div>
+      {placeID ? (
+        <>
       <Panel title="Current access" action={<Status value={e?.source ?? 'none'} />}>
         <p>{e?.reason ?? entitlement.error ?? 'Loading entitlement…'}</p>
         {e?.validUntil && <p>Valid through {displayDate(e.validUntil)}</p>}
@@ -474,12 +483,27 @@ export function Billing({
           </>
         )}
       </Panel>
+        </>
+      ) : (
+        <Panel title="Choose a location for its plan">
+          <Empty title="No location selected">
+            Add a location to check its access and activate a plan. Workspace payment history is
+            available below.
+          </Empty>
+        </Panel>
+      )}
       <Panel title="Plan & payment history">
-        {!subs.length && <p className="muted">No checkout has been created for this location.</p>}
+        {billing.error && <p className="notice">{billing.error}</p>}
+        {!subs.length && (
+          <p className="muted">
+            No checkout has been created for {placeID ? 'this location' : 'this workspace'}.
+          </p>
+        )}
         {subs.map((s: any) => (
           <div className="subscription" key={s.id}>
             <div className="record">
               <div>
+                {!placeID && <small>Location {s.placeID}</small>}
                 <Status value={s.status} />
                 <p>Paid through {displayDate(s.paidUntil)}</p>
                 {s.cancelAtPeriodEnd && (
@@ -554,12 +578,20 @@ export function Settings({
   base,
   run,
   busy,
+  places,
+  onSelectPlace,
+  onEditPlace,
+  onAddPlace,
 }: {
   tenantID: string;
   placeID: string;
   base: string;
   run: Run;
   busy: string;
+  places: Array<{ id: string; name: string; claimState: string }>;
+  onSelectPlace: (id: string) => void;
+  onEditPlace: () => void;
+  onAddPlace?: () => void;
 }) {
   const settings = useResource('/v1/settings'),
     requests = useResource('/v1/service-requests'),
@@ -568,9 +600,46 @@ export function Settings({
   return (
     <>
       <Panel
+        title="Your businesses"
+        subtitle="Switch the active business, edit its private details, or add another location."
+      >
+        {places.length > 0 ? (
+          <>
+            <Field label="Active business">
+              <select value={placeID} onChange={(e) => onSelectPlace(e.target.value)}>
+                {places.map((place) => (
+                  <option key={place.id} value={place.id}>
+                    {place.name} · {place.claimState.replaceAll('_', ' ')}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <div className="actions">
+              <Button variant="secondary" onClick={onEditPlace} disabled={!placeID}>
+                Edit business details
+              </Button>
+              {onAddPlace && (
+                <Button onClick={onAddPlace}>
+                  <Plus size={16} /> Add or claim a business
+                </Button>
+              )}
+            </div>
+          </>
+        ) : (
+          <Empty
+            title="No business added yet"
+            action={onAddPlace ? <Button onClick={onAddPlace}>Add or claim a business</Button> : undefined}
+          >
+            Search for an existing branch or add a new private location.
+          </Empty>
+        )}
+      </Panel>
+      <Panel
         title="Your data"
         subtitle="Download business facts, drafts and publication history in a portable format."
       >
+        {placeID ? (
+          <>
         <Button
           variant="secondary"
           onClick={() =>
@@ -586,12 +655,19 @@ export function Settings({
           <Download size={16} />
           Download website & photos
         </a>
+          </>
+        ) : (
+          <Empty title="No location to export">
+            Add or select a location to download its business data.
+          </Empty>
+        )}
         <p className="hint">
           Private ownership documents and site credentials are excluded. Request verified access to
           private evidence below.
         </p>
       </Panel>
       <Panel title="Notifications">
+        {settings.error && <p className="notice">{settings.error}</p>}
         {settings.data && (
           <>
             <CheckLine
@@ -674,7 +750,7 @@ export function Settings({
             run('Submit request', async () => {
               await api('/v1/service-requests', {
                 method: 'POST',
-                body: { tenantID, placeID, kind, message },
+                body: { tenantID, placeID: placeID || null, kind, message },
               });
               setMessage('');
               requests.reload();
@@ -685,6 +761,7 @@ export function Settings({
         </Button>
       </Panel>
       <Panel title="Your requests">
+        {requests.error && <p className="notice">{requests.error}</p>}
         {requests.data?.requests
           ?.filter((r: any) => r.tenantID === tenantID || !r.tenantID)
           .map((r: any) => (
@@ -703,10 +780,45 @@ export function Settings({
     </>
   );
 }
-export function Visibility({ base }: { base: string }) {
-  const data = useResource(base + '/visibility');
+export function Visibility({ base, approved, onEdit, onPublish, places, placeID, onSelectPlace }: { base: string; approved: boolean; onEdit: () => void; onPublish: () => void; places: { id: string; name: string; claimState: string }[]; placeID: string; onSelectPlace: (id: string) => void }) {
+  const readiness = useResource(base + '/readiness');
+  const data = useResource(approved ? base + '/visibility' : null);
+  const report = readiness.data;
   return (
     <>
+      <section className="visibility-hero">
+        <div><span className="eyebrow">DISCOVERY READINESS</span><h2>Make your business easier to find.</h2><p>Two practical scores for {report?.businessName ?? 'your business'}, calculated from your saved facts and public page.</p></div>
+        <Button variant="secondary" type="button" onClick={() => readiness.reload()} disabled={readiness.loading}><RefreshCw size={17} className={readiness.loading ? 'spin' : ''} /> Recalculate scores</Button>
+      </section>
+      {readiness.error && <p className="notice" role="alert">{readiness.error}</p>}
+      {report && <>
+        <div className="readiness-grid">
+          {[{ key: 'geo', short: 'GEO', title: 'Generative engine readiness', detail: 'How complete and useful your public facts are for AI discovery tools such as ChatGPT and Gemini.' }, { key: 'seo', short: 'SEO', title: 'Search engine readiness', detail: 'How ready your business page is for crawling and indexing by search engines.' }].map((item) => {
+            const result = report[item.key];
+            return <article className={`readiness-card ${item.key}`} key={item.key}>
+              <div className="readiness-card-top"><span>{item.short} SCORE</span><span>Readiness · not ranking</span></div>
+              <div className="readiness-number"><strong>{result.score}</strong><span>/ 100</span></div>
+              <div className="readiness-meter" role="meter" aria-label={`${item.short} readiness`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={result.score}><i style={{ width: `${result.score}%` }} /></div>
+              <h3>{item.title}</h3><p>{item.detail}</p>
+              <div className="readiness-checks">{result.checks.map((check: any) => <div className="readiness-check" key={check.id}><span className={check.passed ? 'passed' : ''}>{check.passed ? '✓' : '○'}</span><div><strong>{check.label}</strong>{!check.passed && <small>{check.action}</small>}</div><b>{check.passed ? '+' : ''}{check.passed ? check.weight : 0}/{check.weight}</b></div>)}</div>
+            </article>;
+          })}
+        </div>
+        <Panel title="Get your business into discovery" subtitle="The next steps for this business, based on its current state.">
+          <div className="discovery-steps">
+            <div><span>01</span><div><strong>Complete the facts</strong><p>Use your real name, address, hours, contact details and categorized offerings. The scores update from the latest saved draft.</p></div><Button variant="ghost" onClick={onEdit}>Edit facts <ArrowRight size={15} /></Button></div>
+            <div><span>02</span><div><strong>Publish the approved page</strong><p>{report.claimState === 'approved' ? 'Review the preview and publish to create a canonical business page with structured data and a sitemap entry.' : 'Your ownership claim needs approval before your page can be published. You can improve the private draft now.'}</p></div><Button variant="ghost" onClick={onPublish}>Review <ArrowRight size={15} /></Button></div>
+            <div><span>03</span><div><strong>Submit and monitor search indexing</strong><p>Once live, the owner of the published domain can verify it in Google Search Console and submit the sitemap. Kulture manages this for pages on its own domain. Search engines decide indexing and rankings.</p><div className="visibility-links"><External href="https://search.google.com/search-console/">Open Search Console</External>{report.publicURL && <><External href={report.publicURL}>Open business page</External><External href={report.sitemapURL}>Open sitemap</External></>}</div></div></div>
+            <div><span>04</span><div><strong>Keep it useful for AI discovery</strong><p>Keep public facts accurate, specific and current. AI services choose their own sources and answers; this score cannot confirm citations or recommendations.</p></div></div>
+          </div>
+          <p className="hint">{report.methodology} Recalculated {displayDate(report.computedAt)} from {report.profileSource === 'latest_saved_draft' ? 'the latest saved draft' : 'the business record'}.</p>
+        </Panel>
+      </>}
+      {places.length > 1 && <Panel title="All your businesses" subtitle="Select a business to see its own GEO and SEO readiness.">
+        <div className="visibility-businesses">{places.map((place) => <button className={place.id === placeID ? 'active' : ''} type="button" key={place.id} onClick={() => onSelectPlace(place.id)} aria-current={place.id === placeID ? 'true' : undefined}><span><strong>{place.name}</strong><small>Ownership {place.claimState}</small></span><span>{place.id === placeID ? 'Viewing scores' : 'View scores →'}</span></button>)}</div>
+      </Panel>}
+      {!approved && <Empty title="Crawler measurements open after approval">GEO and SEO readiness are available above. Measured discovery activity requires an approved claim and connected evidence.</Empty>}
+      {approved && <>
       <Panel
         title="Discovery evidence"
         subtitle="Observed activity, with the method and coverage attached."
@@ -741,6 +853,7 @@ export function Visibility({ base }: { base: string }) {
           Report window: {displayDate(data.data?.from)} → {displayDate(data.data?.to)}
         </p>
       </Panel>
+      </>}
     </>
   );
 }

@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 2,
+  "placeID": "example-branch",
+  "placeRevision": 1,
+  "graphRevision": 1,
+  "graphID": "synthetic-graph",
+  "assetRevision": "40883e5f13fe087e366fe6851477a649ed374ff718a456c776c3b1166057428a",
+  "closureRevision": 0,
+  "capability": "indoor",
+  "status": "available",
+  "reason": null,
+  "computedAt": "2026-09-29T04:00:00.000Z",
+  "expiresAt": "2026-09-29T04:05:00Z",
+  "verification": {
+    "source": "independent",
+    "verifiedAt": "2026-09-29T03:00:00Z",
+    "validUntil": "2026-09-30T03:00:00Z"
+  },
+  "selectedEntrance": {
+    "id": "east-door",
+    "nodeID": "entry",
+    "label": "Example east entrance",
+    "approach": {
+      "nodeID": "approach",
+      "latitude": 17.43,
+      "longitude": 78.41,
+      "accuracyMetres": 5,
+      "source": "survey",
+      "verifiedAt": "2026-01-01T00:00:00Z",
+      "validUntil": "2099-01-01T00:00:00Z"
+    }
+  },
+  "destination": {
+    "nodeID": "shop",
+    "floorID": "first",
+    "label": "Shop"
+  },
+  "route": {
+    "nodeIDs": [
+      "approach",
+      "entry",
+      "hall",
+      "lift-ground",
+      "lift-first",
+      "shop"
+    ],
+    "edgeIDs": [
+      "approach-entry",
+      "entry-hall",
+      "hall-lift",
+      "lift-up",
+      "lift-shop"
+    ],
+    "checkpoints": [
+      {
+        "nodeID": "approach",
+        "floorID": "ground",
+        "floorLabel": "G",
+        "label": "Approach",
+        "instruction": "Confirm this approach point before starting.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "approach"
+      },
+      {
+        "nodeID": "entry",
+        "floorID": "ground",
+        "floorLabel": "G",
+        "label": "Entry",
+        "instruction": "Proceed from approach to entry.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "entrance"
+      },
+      {
+        "nodeID": "hall",
+        "floorID": "ground",
+        "floorLabel": "G",
+        "label": "Hall",
+        "instruction": "Proceed from entry to hall.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "corridor"
+      },
+      {
+        "nodeID": "lift-ground",
+        "floorID": "ground",
+        "floorLabel": "G",
+        "label": "Lift Ground",
+        "instruction": "Proceed from hall to lift-ground.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "corridor"
+      },
+      {
+        "nodeID": "lift-first",
+        "floorID": "first",
+        "floorLabel": "1",
+        "label": "Lift First",
+        "instruction": "Proceed from lift-ground to lift-first.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "lift"
+      },
+      {
+        "nodeID": "shop",
+        "floorID": "first",
+        "floorLabel": "1",
+        "label": "Shop",
+        "instruction": "Proceed from lift-first to shop.",
+        "photoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "requiresConfirmation": true,
+        "traversalType": "corridor"
+      }
+    ],
+    "lengthMetres": 25,
+    "durationSeconds": 60,
+    "costKind": "measured"
+  },
+  "assets": [
+    {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "url": "https://example.invalid/fixture.webp",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "mime": "image/webp",
+      "alt": "Synthetic contract fixture",
+      "width": 100,
+      "height": 100
+    }
+  ],
+  "graph": {
+    "schemaVersion": 2,
+    "graphID": "synthetic-graph",
+    "buildingID": "synthetic-building",
+    "name": "Synthetic contract fixture; not a surveyed venue",
+    "sample": false,
+    "floors": [
+      {
+        "id": "ground",
+        "label": "G",
+        "order": 0,
+        "planAssetID": null,
+        "frame": {
+          "units": "percent",
+          "width": 100,
+          "height": 100,
+          "origin": "top-left",
+          "xAxis": "right",
+          "yAxis": "down",
+          "calibrationRevision": 0,
+          "surveyed": false
+        },
+        "boundary": []
+      },
+      {
+        "id": "first",
+        "label": "1",
+        "order": 1,
+        "planAssetID": null,
+        "frame": {
+          "units": "percent",
+          "width": 100,
+          "height": 100,
+          "origin": "top-left",
+          "xAxis": "right",
+          "yAxis": "down",
+          "calibrationRevision": 0,
+          "surveyed": false
+        },
+        "boundary": []
+      }
+    ],
+    "nodes": [
+      {
+        "id": "approach",
+        "floorID": "ground",
+        "type": "approach",
+        "localPosition": null,
+        "outdoorPoint": {
+          "latitude": 17.43,
+          "longitude": 78.41,
+          "accuracyMetres": 5,
+          "source": "survey",
+          "verifiedAt": "2026-01-01T00:00:00Z",
+          "validUntil": "2099-01-01T00:00:00Z"
+        },
+        "labelByLocale": {
+          "en": "Approach"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": null
+      },
+      {
+        "id": "entry",
+        "floorID": "ground",
+        "type": "entrance",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Entry"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": null
+      },
+      {
+        "id": "hall",
+        "floorID": "ground",
+        "type": "waypoint",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Hall"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": null
+      },
+      {
+        "id": "lift-ground",
+        "floorID": "ground",
+        "type": "lift",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Lift Ground"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": "lift-a"
+      },
+      {
+        "id": "lift-first",
+        "floorID": "first",
+        "type": "lift",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Lift First"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": "lift-a"
+      },
+      {
+        "id": "stairs-ground",
+        "floorID": "ground",
+        "type": "stairs",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Stairs Ground"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": "stairs-a"
+      },
+      {
+        "id": "stairs-first",
+        "floorID": "first",
+        "type": "stairs",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Stairs First"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": "stairs-a"
+      },
+      {
+        "id": "shop",
+        "floorID": "first",
+        "type": "destination",
+        "localPosition": null,
+        "outdoorPoint": null,
+        "labelByLocale": {
+          "en": "Shop"
+        },
+        "permittedPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "evidenceID": "walkthrough-1",
+        "accessPolicy": {
+          "state": "open",
+          "evidenceID": "walkthrough-1",
+          "schedule": null
+        },
+        "connectorID": null
+      }
+    ],
+    "directedEdges": [
+      {
+        "id": "approach-entry",
+        "fromNodeID": "approach",
+        "toNodeID": "entry",
+        "traversalType": "entrance",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from approach to entry."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "entry-hall",
+        "fromNodeID": "entry",
+        "toNodeID": "hall",
+        "traversalType": "corridor",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from entry to hall."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "hall-lift",
+        "fromNodeID": "hall",
+        "toNodeID": "lift-ground",
+        "traversalType": "corridor",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from hall to lift-ground."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "lift-up",
+        "fromNodeID": "lift-ground",
+        "toNodeID": "lift-first",
+        "traversalType": "lift",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 20,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from lift-ground to lift-first."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": "lift-a",
+        "accessState": "open"
+      },
+      {
+        "id": "lift-shop",
+        "fromNodeID": "lift-first",
+        "toNodeID": "shop",
+        "traversalType": "corridor",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from lift-first to shop."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "hall-stairs",
+        "fromNodeID": "hall",
+        "toNodeID": "stairs-ground",
+        "traversalType": "corridor",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from hall to stairs-ground."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "stairs-up",
+        "fromNodeID": "stairs-ground",
+        "toNodeID": "stairs-first",
+        "traversalType": "stairs",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 60,
+        "costSource": "measured",
+        "steps": 10,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from stairs-ground to stairs-first."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "no",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      },
+      {
+        "id": "stairs-shop",
+        "fromNodeID": "stairs-first",
+        "toNodeID": "shop",
+        "traversalType": "corridor",
+        "geometry": null,
+        "lengthMetres": 5,
+        "baseDurationSeconds": 10,
+        "costSource": "measured",
+        "steps": null,
+        "restrictionRefs": [],
+        "turnInstructionRefs": [],
+        "permittedModes": [
+          "walking"
+        ],
+        "openingSchedule": null,
+        "instructionByLocale": {
+          "en": "Proceed from stairs-first to shop."
+        },
+        "directionalPhotoIDs": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "verificationRef": "walkthrough-1",
+        "accessibilityEvidence": {
+          "stepFree": "confirmed",
+          "evidenceID": "walkthrough-1",
+          "clearWidthMm": null,
+          "slope": null,
+          "surface": null
+        },
+        "liftID": null,
+        "accessState": "open"
+      }
+    ],
+    "entrances": [
+      {
+        "id": "east-door",
+        "nodeID": "entry",
+        "approachNodeID": "approach",
+        "permittedModes": [
+          "walking",
+          "driving"
+        ],
+        "labelByLocale": {
+          "en": "Example east entrance"
+        }
+      }
+    ],
+    "placeDestinationBindings": [
+      {
+        "placeID": "example-branch",
+        "destinationNodeID": "shop",
+        "entranceIDs": [
+          "east-door"
+        ]
+      }
+    ],
+    "turnInstructions": [],
+    "verificationRecords": [
+      {
+        "id": "walkthrough-1",
+        "source": "independent",
+        "confirmedAt": "2026-01-01T00:00:00Z",
+        "validUntil": "2099-01-01T00:00:00Z",
+        "note": "Synthetic test evidence only; never publish as a real premises survey."
+      }
+    ]
+  },
+  "manifestJSON": "{\"assets\":[{\"alt\":\"Synthetic contract fixture\",\"height\":100,\"id\":\"11111111-1111-4111-8111-111111111111\",\"mime\":\"image/webp\",\"sha256\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"url\":\"https://example.invalid/fixture.webp\",\"width\":100}],\"graph\":{\"buildingID\":\"synthetic-building\",\"directedEdges\":[{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"approach\",\"geometry\":null,\"id\":\"approach-entry\",\"instructionByLocale\":{\"en\":\"Proceed from approach to entry.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"entry\",\"traversalType\":\"entrance\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"entry\",\"geometry\":null,\"id\":\"entry-hall\",\"instructionByLocale\":{\"en\":\"Proceed from entry to hall.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"hall\",\"traversalType\":\"corridor\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"hall\",\"geometry\":null,\"id\":\"hall-lift\",\"instructionByLocale\":{\"en\":\"Proceed from hall to lift-ground.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"lift-ground\",\"traversalType\":\"corridor\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":20,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"lift-ground\",\"geometry\":null,\"id\":\"lift-up\",\"instructionByLocale\":{\"en\":\"Proceed from lift-ground to lift-first.\"},\"lengthMetres\":5,\"liftID\":\"lift-a\",\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"lift-first\",\"traversalType\":\"lift\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"lift-first\",\"geometry\":null,\"id\":\"lift-shop\",\"instructionByLocale\":{\"en\":\"Proceed from lift-first to shop.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"shop\",\"traversalType\":\"corridor\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"hall\",\"geometry\":null,\"id\":\"hall-stairs\",\"instructionByLocale\":{\"en\":\"Proceed from hall to stairs-ground.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"stairs-ground\",\"traversalType\":\"corridor\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"no\",\"surface\":null},\"baseDurationSeconds\":60,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"stairs-ground\",\"geometry\":null,\"id\":\"stairs-up\",\"instructionByLocale\":{\"en\":\"Proceed from stairs-ground to stairs-first.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":10,\"toNodeID\":\"stairs-first\",\"traversalType\":\"stairs\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"},{\"accessState\":\"open\",\"accessibilityEvidence\":{\"clearWidthMm\":null,\"evidenceID\":\"walkthrough-1\",\"slope\":null,\"stepFree\":\"confirmed\",\"surface\":null},\"baseDurationSeconds\":10,\"costSource\":\"measured\",\"directionalPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"fromNodeID\":\"stairs-first\",\"geometry\":null,\"id\":\"stairs-shop\",\"instructionByLocale\":{\"en\":\"Proceed from stairs-first to shop.\"},\"lengthMetres\":5,\"liftID\":null,\"openingSchedule\":null,\"permittedModes\":[\"walking\"],\"restrictionRefs\":[],\"steps\":null,\"toNodeID\":\"shop\",\"traversalType\":\"corridor\",\"turnInstructionRefs\":[],\"verificationRef\":\"walkthrough-1\"}],\"entrances\":[{\"approachNodeID\":\"approach\",\"id\":\"east-door\",\"labelByLocale\":{\"en\":\"Example east entrance\"},\"nodeID\":\"entry\",\"permittedModes\":[\"walking\",\"driving\"]}],\"floors\":[{\"boundary\":[],\"frame\":{\"calibrationRevision\":0,\"height\":100,\"origin\":\"top-left\",\"surveyed\":false,\"units\":\"percent\",\"width\":100,\"xAxis\":\"right\",\"yAxis\":\"down\"},\"id\":\"ground\",\"label\":\"G\",\"order\":0,\"planAssetID\":null},{\"boundary\":[],\"frame\":{\"calibrationRevision\":0,\"height\":100,\"origin\":\"top-left\",\"surveyed\":false,\"units\":\"percent\",\"width\":100,\"xAxis\":\"right\",\"yAxis\":\"down\"},\"id\":\"first\",\"label\":\"1\",\"order\":1,\"planAssetID\":null}],\"graphID\":\"synthetic-graph\",\"name\":\"Synthetic contract fixture; not a surveyed venue\",\"nodes\":[{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":null,\"evidenceID\":\"walkthrough-1\",\"floorID\":\"ground\",\"id\":\"approach\",\"labelByLocale\":{\"en\":\"Approach\"},\"localPosition\":null,\"outdoorPoint\":{\"accuracyMetres\":5,\"latitude\":17.43,\"longitude\":78.41,\"source\":\"survey\",\"validUntil\":\"2099-01-01T00:00:00Z\",\"verifiedAt\":\"2026-01-01T00:00:00Z\"},\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"approach\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":null,\"evidenceID\":\"walkthrough-1\",\"floorID\":\"ground\",\"id\":\"entry\",\"labelByLocale\":{\"en\":\"Entry\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"entrance\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":null,\"evidenceID\":\"walkthrough-1\",\"floorID\":\"ground\",\"id\":\"hall\",\"labelByLocale\":{\"en\":\"Hall\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"waypoint\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":\"lift-a\",\"evidenceID\":\"walkthrough-1\",\"floorID\":\"ground\",\"id\":\"lift-ground\",\"labelByLocale\":{\"en\":\"Lift Ground\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"lift\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":\"lift-a\",\"evidenceID\":\"walkthrough-1\",\"floorID\":\"first\",\"id\":\"lift-first\",\"labelByLocale\":{\"en\":\"Lift First\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"lift\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":\"stairs-a\",\"evidenceID\":\"walkthrough-1\",\"floorID\":\"ground\",\"id\":\"stairs-ground\",\"labelByLocale\":{\"en\":\"Stairs Ground\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"stairs\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":\"stairs-a\",\"evidenceID\":\"walkthrough-1\",\"floorID\":\"first\",\"id\":\"stairs-first\",\"labelByLocale\":{\"en\":\"Stairs First\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"stairs\"},{\"accessPolicy\":{\"evidenceID\":\"walkthrough-1\",\"schedule\":null,\"state\":\"open\"},\"connectorID\":null,\"evidenceID\":\"walkthrough-1\",\"floorID\":\"first\",\"id\":\"shop\",\"labelByLocale\":{\"en\":\"Shop\"},\"localPosition\":null,\"outdoorPoint\":null,\"permittedPhotoIDs\":[\"11111111-1111-4111-8111-111111111111\"],\"type\":\"destination\"}],\"placeDestinationBindings\":[{\"destinationNodeID\":\"shop\",\"entranceIDs\":[\"east-door\"],\"placeID\":\"example-branch\"}],\"sample\":false,\"schemaVersion\":2,\"turnInstructions\":[],\"verificationRecords\":[{\"confirmedAt\":\"2026-01-01T00:00:00Z\",\"id\":\"walkthrough-1\",\"note\":\"Synthetic test evidence only; never publish as a real premises survey.\",\"source\":\"independent\",\"validUntil\":\"2099-01-01T00:00:00Z\"}]}}",
+  "manifestDigest": "d92e0ec01a432e3687971a8ddde805e96fb46043ad4dbcf8fa2cdbeee20ed791",
+  "name": "Synthetic fixture; not a real guide",
+  "address": "No real premises",
+  "request": {
+    "mode": "walking",
+    "stepFree": "true",
+    "locale": "en",
+    "departureAt": "2026-09-29T04:00:00.000Z"
+  }
+}

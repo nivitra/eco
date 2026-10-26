@@ -1,0 +1,842 @@
+{
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "fetchedAt": "2026-10-01T14:33:44.450Z",
+  "query": "[out:json][timeout:45][maxsize:16777216];(\nnwr[\"amenity\"~\"^(cafe|hospital|clinic|doctors|dentist|pharmacy|community_centre|arts_centre|library|marketplace|townhall|social_centre)$\"](17.375,78.315,17.419,78.363);\nnwr[\"healthcare\"](17.375,78.315,17.419,78.363);\nnwr[\"shop\"~\"^(stationery|copyshop|books)$\"](17.375,78.315,17.419,78.363);\nnwr[\"leisure\"~\"^(park|garden|playground|recreation_ground|common)$\"](17.375,78.315,17.419,78.363);\nnwr[\"place\"=\"square\"](17.375,78.315,17.419,78.363);\nnwr[\"natural\"=\"water\"][\"name\"](17.375,78.315,17.419,78.363);\n);out tags center;",
+  "querySha256": "e73909f869a7cf97989ab2192c786c6f8fb6e85c8f7d8ab815b28c064ec5498d",
+  "sourcePolicy": {
+    "kind": "direct-public-api",
+    "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+    "robotsScope": "Website crawl exclusions recorded; documented developer API request uses the explicit API resource policy."
+  },
+  "robots": {
+    "url": "https://overpass-api.de/robots.txt",
+    "status": 200,
+    "text": "User-agent: *\nDisallow: /api/\nDisallow: /munin/\nSitemap: https://z.overpass-api.de/api/sitemap\n",
+    "checkedAt": "2026-10-01T14:33:44.450Z"
+  },
+  "data": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-10-01T14:31:06Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 6559484122,
+        "lat": 17.4175248,
+        "lon": 78.3394005,
+        "tags": {
+          "addr:city": "Hyderabad",
+          "addr:full": "Plot No. 3, Road No. 2, IT & Financial district, Kurmaguda",
+          "addr:postcode": "500035",
+          "addr:state": "Telangana",
+          "contact:mobile": "9963445607",
+          "email": "bloodbank@continentalhospitals.com",
+          "fax": "4067225299",
+          "healthcare": "blood_bank",
+          "name": "Continental Hospital's Blood Bank",
+          "opening_hours": "24/7",
+          "operator:type": "private",
+          "phone": "04067000000;Extn:1105",
+          "source": "OpenGovernmentData",
+          "website": "https://www.continentalhospitals.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6656722815,
+        "lat": 17.3871158,
+        "lon": 78.3549026,
+        "tags": {
+          "addr:district": "Rangareddy",
+          "addr:place": "Narsingi",
+          "addr:state": "Telangana",
+          "addr:street": "MAINROAD",
+          "addr:subdistrict": "Rajendranagar",
+          "amenity": "clinic",
+          "healthcare": "clinic",
+          "name": "Urban Primary Health Centre Narsingi",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11018919100,
+        "lat": 17.3973016,
+        "lon": 78.3354498,
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:place": "Saroornagar",
+          "addr:state": "Telangana",
+          "addr:street": "Saroornagar",
+          "addr:subdistrict": "Saidabad",
+          "amenity": "doctors",
+          "healthcare": "doctor",
+          "name": "Government Poly Clinic (Unani), Saroornagar",
+          "operational_status": "operational",
+          "operator:type": "government",
+          "source": "OpenDataTelangana"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11447318966,
+        "lat": 17.3936422,
+        "lon": 78.3409298,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Prezmo"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11447355789,
+        "lat": 17.3854867,
+        "lon": 78.3303923,
+        "tags": {
+          "amenity": "pharmacy",
+          "brand": "Apollo Pharmacy",
+          "brand:wikidata": "Q62562612",
+          "healthcare": "pharmacy",
+          "name": "Apollo Pharmacy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11447355806,
+        "lat": 17.3859602,
+        "lon": 78.3337107,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Starbucks",
+          "brand:wikidata": "Q37158",
+          "cuisine": "coffee_shop",
+          "name": "Starbucks",
+          "official_name": "Starbucks Coffee",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 28130557,
+        "center": {
+          "lat": 17.3747047,
+          "lon": 78.2877656
+        },
+        "tags": {
+          "alt_name": "Gandipet",
+          "intermittent": "no",
+          "name": "Osman Sagar",
+          "name:ar": "بحيرة عثمان ساغار",
+          "name:en": "Osman Sagar",
+          "name:fa": "دریاچه عثمان ساگر",
+          "name:ml": "ഉസ്മാൻ സാഗർ",
+          "name:te": "ఉస్మాన్ సాగర్",
+          "name:ur": "عثمان ساگر",
+          "natural": "water",
+          "salt": "no",
+          "tidal": "no",
+          "water": "lake",
+          "wikidata": "Q7107102",
+          "wikipedia": "en:Osman Sagar"
+        }
+      },
+      {
+        "type": "way",
+        "id": 254295845,
+        "center": {
+          "lat": 17.4176645,
+          "lon": 78.3391307
+        },
+        "tags": {
+          "addr:district": "Hyderabad",
+          "addr:full": "Plot Number 3, Road Number 2, I.T and Financial District, Nanakramguda, Gachibowli",
+          "addr:postcode": "500032",
+          "addr:state": "Telangana",
+          "amenity": "hospital",
+          "contact:tollfree": "1800 108 1007",
+          "emergency": "yes",
+          "emergency_telephone_code": "040 67000111",
+          "health_facility:type": "Surgical Specialities and Operation Theatres; ICU; ATM; WIFI; Business Centre",
+          "healthcare": "hospital",
+          "healthcare:speciality": "multi specialty",
+          "medical_system": "Allopathic",
+          "name": "Continental Hospitals",
+          "operator:type": "private",
+          "phone": "040-67000000; 040-67000071",
+          "source": "OpenGovernmentData",
+          "website": "https://www.continentalhospitals.com/"
+        }
+      },
+      {
+        "type": "way",
+        "id": 626348183,
+        "center": {
+          "lat": 17.3819305,
+          "lon": 78.3158045
+        },
+        "tags": {
+          "fee": "Rs. 10",
+          "leisure": "park",
+          "name": "Gandipet Lake park",
+          "opening_hours": "Mo-Su 08:00-19:00",
+          "operator": "Hyderabad Metropolitan Development Authority",
+          "source": "local knowledge"
+        }
+      },
+      {
+        "type": "way",
+        "id": 661188648,
+        "center": {
+          "lat": 17.4147498,
+          "lon": 78.3617775
+        },
+        "tags": {
+          "name": "Khajaguda Lake",
+          "natural": "water",
+          "water": "lake",
+          "wikidata": "Q64094699",
+          "wikipedia": "en:Khajaguda Lake"
+        }
+      },
+      {
+        "type": "way",
+        "id": 667022874,
+        "center": {
+          "lat": 17.3873533,
+          "lon": 78.3464889
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 686325013,
+        "center": {
+          "lat": 17.4023617,
+          "lon": 78.327488
+        },
+        "tags": {
+          "name": "Kokapet Lake",
+          "natural": "water",
+          "water": "lake"
+        }
+      },
+      {
+        "type": "way",
+        "id": 687813407,
+        "center": {
+          "lat": 17.3769889,
+          "lon": 78.3158097
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Rock Garden",
+          "operator": "HMWSSB",
+          "operator:type": "government",
+          "source": "local knowledge;aerial imagery"
+        }
+      },
+      {
+        "type": "way",
+        "id": 790788317,
+        "center": {
+          "lat": 17.3761232,
+          "lon": 78.3561507
+        },
+        "tags": {
+          "amenity": "community_centre",
+          "name": "PSR Gardens"
+        }
+      },
+      {
+        "type": "way",
+        "id": 975084179,
+        "center": {
+          "lat": 17.3982254,
+          "lon": 78.3553403
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1133471638,
+        "center": {
+          "lat": 17.3995152,
+          "lon": 78.3392503
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1134842642,
+        "center": {
+          "lat": 17.4144083,
+          "lon": 78.3298405
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1212211128,
+        "center": {
+          "lat": 17.3865663,
+          "lon": 78.3474294
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1212211129,
+        "center": {
+          "lat": 17.3856566,
+          "lon": 78.3541307
+        },
+        "tags": {
+          "leisure": "park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222717786,
+        "center": {
+          "lat": 17.4187879,
+          "lon": 78.3476077
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222717787,
+        "center": {
+          "lat": 17.4177195,
+          "lon": 78.3468286
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222717788,
+        "center": {
+          "lat": 17.4173868,
+          "lon": 78.3462197
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222790036,
+        "center": {
+          "lat": 17.414533,
+          "lon": 78.3399871
+        },
+        "tags": {
+          "access": "private",
+          "leisure": "playground",
+          "name": "High Field's Children's Play Area",
+          "operator": "Prestige High Fields"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222792407,
+        "center": {
+          "lat": 17.4149022,
+          "lon": 78.340198
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222793133,
+        "center": {
+          "lat": 17.4133737,
+          "lon": 78.3394115
+        },
+        "tags": {
+          "leisure": "garden",
+          "name": "High Fields Front Garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222793134,
+        "center": {
+          "lat": 17.413794,
+          "lon": 78.3395852
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222890642,
+        "center": {
+          "lat": 17.4154378,
+          "lon": 78.3417282
+        },
+        "tags": {
+          "leisure": "garden",
+          "name": "High Fields Romantic Garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1222890659,
+        "center": {
+          "lat": 17.4154928,
+          "lon": 78.3395038
+        },
+        "tags": {
+          "leisure": "garden",
+          "name": "High Fields Garden of Lights"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1233761429,
+        "center": {
+          "lat": 17.4015232,
+          "lon": 78.3361265
+        },
+        "tags": {
+          "leisure": "park",
+          "name": "Golden Mile Park"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1233838444,
+        "center": {
+          "lat": 17.3918228,
+          "lon": 78.3308916
+        },
+        "tags": {
+          "building": "yes",
+          "leisure": "playground",
+          "sport": "basketball"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234909364,
+        "center": {
+          "lat": 17.400263,
+          "lon": 78.3461733
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234909365,
+        "center": {
+          "lat": 17.4001985,
+          "lon": 78.3464215
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234918432,
+        "center": {
+          "lat": 17.4010732,
+          "lon": 78.3474959
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234918434,
+        "center": {
+          "lat": 17.4009819,
+          "lon": 78.3487116
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234918435,
+        "center": {
+          "lat": 17.4007441,
+          "lon": 78.3490717
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234928433,
+        "center": {
+          "lat": 17.3993208,
+          "lon": 78.3478047
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234928434,
+        "center": {
+          "lat": 17.3986383,
+          "lon": 78.3490388
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234928435,
+        "center": {
+          "lat": 17.3989769,
+          "lon": 78.3484446
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234928436,
+        "center": {
+          "lat": 17.3983721,
+          "lon": 78.3494826
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234928442,
+        "center": {
+          "lat": 17.4005444,
+          "lon": 78.350764
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234932198,
+        "center": {
+          "lat": 17.3956071,
+          "lon": 78.3513422
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957406,
+        "center": {
+          "lat": 17.4006306,
+          "lon": 78.3450415
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957407,
+        "center": {
+          "lat": 17.4010349,
+          "lon": 78.3470165
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957408,
+        "center": {
+          "lat": 17.4009352,
+          "lon": 78.3504286
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957410,
+        "center": {
+          "lat": 17.4004223,
+          "lon": 78.3465294
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957411,
+        "center": {
+          "lat": 17.4006289,
+          "lon": 78.3464278
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957412,
+        "center": {
+          "lat": 17.4006127,
+          "lon": 78.3484913
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957413,
+        "center": {
+          "lat": 17.4005656,
+          "lon": 78.3487812
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957414,
+        "center": {
+          "lat": 17.4005209,
+          "lon": 78.3486118
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957420,
+        "center": {
+          "lat": 17.397411,
+          "lon": 78.3580712
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957421,
+        "center": {
+          "lat": 17.397672,
+          "lon": 78.3580525
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957422,
+        "center": {
+          "lat": 17.3979353,
+          "lon": 78.35804
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957423,
+        "center": {
+          "lat": 17.398259,
+          "lon": 78.358018
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957424,
+        "center": {
+          "lat": 17.3987513,
+          "lon": 78.3579876
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957425,
+        "center": {
+          "lat": 17.3983167,
+          "lon": 78.3575208
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234957426,
+        "center": {
+          "lat": 17.3985117,
+          "lon": 78.3573623
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234962051,
+        "center": {
+          "lat": 17.4025887,
+          "lon": 78.3469173
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234962053,
+        "center": {
+          "lat": 17.4023552,
+          "lon": 78.3469599
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234962056,
+        "center": {
+          "lat": 17.4013953,
+          "lon": 78.3448627
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1234962061,
+        "center": {
+          "lat": 17.4026306,
+          "lon": 78.3464722
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276749334,
+        "center": {
+          "lat": 17.4130905,
+          "lon": 78.3394229
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276749335,
+        "center": {
+          "lat": 17.4137173,
+          "lon": 78.3383585
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276749336,
+        "center": {
+          "lat": 17.4143989,
+          "lon": 78.3374219
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276749337,
+        "center": {
+          "lat": 17.4149771,
+          "lon": 78.3361345
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276749338,
+        "center": {
+          "lat": 17.4155662,
+          "lon": 78.3346621
+        },
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1300732264,
+        "center": {
+          "lat": 17.4015386,
+          "lon": 78.3499741
+        },
+        "tags": {
+          "amenity": "hospital",
+          "healthcare": "hospital",
+          "name": "Sankaraya Eye Hospital"
+        }
+      }
+    ]
+  }
+}

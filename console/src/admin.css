@@ -1,0 +1,49 @@
+.admin-shell {
+  min-height: 100vh;
+  background: var(--canvas);
+  color: var(--text);
+}
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 36px max(28px, calc((100vw - 1120px) / 2));
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.admin-header h1 { margin: 5px 0 7px; font-size: clamp(28px, 4vw, 42px); }
+.admin-header p { margin: 0; color: var(--muted); }
+.admin-console-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); white-space: nowrap; }
+.admin-main { max-width: 1176px; margin: 0 auto; padding: 30px 28px 80px; }
+.admin-main > .notice { margin-bottom: 20px; }
+.admin-signin { max-width: 480px; margin: 40px auto; }
+.admin-signin form { display: grid; gap: 16px; margin-top: 20px; }
+.admin-signin .button { justify-self: start; }
+.admin-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 22px; flex-wrap: wrap; }
+.admin-account { color: var(--muted); font-size: 12px; }
+.admin-claims { display: grid; gap: 18px; }
+.admin-claim-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.admin-claim-head h2 { font-size: 22px; margin: 5px 0; }
+.admin-claim-head p { color: var(--muted); margin: 0; }
+.admin-claim-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 24px 0; }
+.admin-claim-meta div { min-width: 0; }
+.admin-claim-meta dt { color: var(--muted); font-size: 11px; margin-bottom: 5px; }
+.admin-claim-meta dd { margin: 0; overflow-wrap: anywhere; }
+.admin-evidence { padding: 18px; background: var(--raised); border-radius: 10px; }
+.admin-evidence h3 { margin: 0 0 8px; font-size: 14px; }
+.admin-evidence p { margin: 0 0 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.admin-evidence a { color: var(--accent); }
+.admin-review { margin-top: 22px; }
+.admin-review .actions { margin-top: 14px; }
+.admin-reviewed { margin: 18px 0 0; color: var(--muted); }
+.admin-empty { text-align: center; padding: 60px 24px; }
+.admin-empty svg { color: var(--accent); }
+.admin-empty h2 { margin: 10px 0 5px; }
+.admin-empty p { color: var(--muted); }
+.admin-main > .button { margin-top: 22px; }
+@media (max-width: 760px) {
+  .admin-header { padding: 25px 20px; align-items: flex-start; flex-direction: column; }
+  .admin-main { padding: 20px 16px 60px; }
+  .admin-claim-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

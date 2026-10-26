@@ -1,0 +1,647 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cafes",
+        "food",
+        "art",
+        "heritage",
+        "nature",
+        "nightlife",
+        "shopping",
+        "wellness",
+        "business"
+      ]
+    },
+    "neighborhood": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 180
+    },
+    "address": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 600
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 2000
+    },
+    "tags": {
+      "maxItems": 15,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 60
+      }
+    },
+    "phone": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 30
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "website": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000,
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "hoursText": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 700
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "entranceNote": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "businessType": {
+      "type": "string",
+      "enum": [
+        "cafe",
+        "restaurant",
+        "bar",
+        "gallery",
+        "heritage",
+        "park",
+        "retail",
+        "wellness",
+        "hotel",
+        "salon",
+        "healthcare",
+        "education",
+        "professional_services",
+        "automotive",
+        "repair",
+        "manufacturing",
+        "other"
+      ]
+    },
+    "businessTypeLabel": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 120
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locality": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "const": "IN"
+        },
+        "state": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "district": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "city": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "citySlug": {
+          "type": "string",
+          "maxLength": 120,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "locality": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 180
+        },
+        "street": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 300
+        },
+        "building": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 180
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "floor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "landmark": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "postalCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{5}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "serviceArea": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 300
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "country",
+        "state",
+        "city",
+        "citySlug",
+        "locality",
+        "street"
+      ],
+      "additionalProperties": false
+    },
+    "hours": {
+      "type": "object",
+      "properties": {
+        "timezone": {
+          "type": "string",
+          "const": "Asia/Kolkata"
+        },
+        "weekly": {
+          "maxItems": 7,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "day": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "closed",
+                  "unknown",
+                  "appointment_only"
+                ]
+              },
+              "periods": {
+                "maxItems": 6,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "opens": {
+                      "type": "string",
+                      "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+                    },
+                    "closes": {
+                      "type": "string",
+                      "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+                    },
+                    "endsNextDay": {
+                      "default": false,
+                      "type": "boolean"
+                    },
+                    "appointmentOnly": {
+                      "default": false,
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "opens",
+                    "closes",
+                    "endsNextDay",
+                    "appointmentOnly"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "day",
+              "state",
+              "periods"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "exceptions": {
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "closed",
+                  "unknown",
+                  "appointment_only"
+                ]
+              },
+              "periods": {
+                "maxItems": 6,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "opens": {
+                      "type": "string",
+                      "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+                    },
+                    "closes": {
+                      "type": "string",
+                      "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+                    },
+                    "endsNextDay": {
+                      "default": false,
+                      "type": "boolean"
+                    },
+                    "appointmentOnly": {
+                      "default": false,
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "opens",
+                    "closes",
+                    "endsNextDay",
+                    "appointmentOnly"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 180
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "date",
+              "state",
+              "periods"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "timezone",
+        "weekly",
+        "exceptions"
+      ],
+      "additionalProperties": false
+    },
+    "offerings": {
+      "maxItems": 250,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 180
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1200
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "priceMinor": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "currency": {
+            "default": "INR",
+            "type": "string",
+            "const": "INR"
+          },
+          "priceUnit": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "priceQualifier": {
+            "default": "unknown",
+            "type": "string",
+            "enum": [
+              "fixed",
+              "from",
+              "range",
+              "on_request",
+              "unknown"
+            ]
+          },
+          "priceMaxMinor": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "availability": {
+            "default": "unknown",
+            "type": "string",
+            "enum": [
+              "available",
+              "unavailable",
+              "seasonal",
+              "unknown"
+            ]
+          },
+          "conditions": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 700
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sourceURL": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000,
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "currency",
+          "priceQualifier",
+          "availability"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "localizedNames": {
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})?$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "conditions": {
+      "maxItems": 30,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "temporarily_closed",
+        "permanently_closed",
+        "unknown"
+      ]
+    },
+    "publicEmail": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 254,
+          "format": "email",
+          "pattern": "^(?:[A-Za-z0-9_'+\\-]+\\.)*[A-Za-z0-9_'+\\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance": {
+      "maxItems": 150,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "owner",
+              "document",
+              "official_url",
+              "operator"
+            ]
+          },
+          "sourceURL": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000,
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "observedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 400
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "field",
+          "source",
+          "observedAt"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "neighborhood",
+    "address",
+    "summary",
+    "tags"
+  ],
+  "additionalProperties": false
+}

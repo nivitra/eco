@@ -1,0 +1,285 @@
+{
+  "status": "fieldwork_required",
+  "realObservations": 0,
+  "syntheticObservationsExcluded": 0,
+  "metrics": {
+    "mapbox:driving": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    },
+    "mapbox:walking": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    },
+    "mapbox:two-wheeler": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    },
+    "google:driving": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    },
+    "google:walking": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    },
+    "google:two-wheeler": {
+      "observations": 0,
+      "completed": 0,
+      "unsupported": 0,
+      "absoluteETAErrorSeconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "absoluteETAErrorFraction": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "wrongGate": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "wrongSide": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "unsafeInstruction": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "searchFoundCorrectBranch": {
+        "assessed": 0,
+        "trueCount": 0,
+        "fraction": null
+      },
+      "entranceErrorMetres": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      },
+      "searchLatencyMilliseconds": {
+        "count": 0,
+        "median": null,
+        "p90": null
+      }
+    }
+  },
+  "comparablePairs": [],
+  "excludedPairs": [],
+  "pairedETAErrorDifferenceSeconds": {
+    "count": 0,
+    "median": null,
+    "p90": null
+  },
+  "interpretation": "A negative paired difference favours Google ETA accuracy for these observations only. Null is unmeasured, not zero. Match mode, departure window, weather, origin and independent destination reference; review all safety failures separately. No field winner is established by a simulator or synthetic data."
+}

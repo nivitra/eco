@@ -46,6 +46,19 @@ export async function api<T = any>(
   }
   return data;
 }
+export async function uploadOfferingImage<T = any>(base: string, file: File): Promise<T> {
+  const response = await fetch(base + '/offerings/extract', {
+    method: 'POST',
+    credentials: 'include',
+    headers: { Accept: 'application/json', 'Content-Type': file.type },
+    body: file,
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new APIError(response.status, data.error?.code ?? 'scan_failed', data.error?.message ?? 'Image scan failed.');
+  }
+  return data;
+}
 export const displayDate = (v?: string | null) =>
   v
     ? new Date(v).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })

@@ -1,0 +1,12 @@
+.git
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+**/.env
+**/.env.*
+**/.secrets
+**/.local-originals
+**/backups
+**/media
+**/database
+**/test-results

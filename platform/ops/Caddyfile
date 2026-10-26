@@ -1,0 +1,53 @@
+{
+ on_demand_tls {
+  ask http://domain-authority:3000/internal/caddy/ask
+ }
+}
+(kulture_public) {
+ encode zstd gzip
+ # Discovery logs exclude authentication, account, plan and GPS requests.
+ @notDiscovery not path_regexp ^/([a-z0-9-]+/places/[a-z0-9][a-z0-9-]*|sites/[A-Za-z0-9-]+)?$
+ log_skip @notDiscovery
+ log discovery {
+  output file /var/log/caddy/discovery.json {
+   mode 0644
+   roll_size 20MiB
+   roll_keep 7
+   roll_keep_for 168h
+  }
+  format filter {
+   request>uri regexp "[?].*$" ""
+   request>headers>Authorization delete
+   request>headers>Proxy-Authorization delete
+   request>headers>Cookie delete
+   request>headers>Referer delete
+   request>headers>X-Ops-Token delete
+   resp_headers>Set-Cookie delete
+   resp_headers>Set-Auth-Token delete
+   wrap json
+  }
+ }
+ @private path /v1/ops/* /internal/* /ops/*
+ respond @private 404
+ @outingShare path /outings/* /v1/outing-shares /v1/outing-shares/*
+ @notOutingShare not path /outings/* /v1/outing-shares /v1/outing-shares/*
+ header @outingShare >Referrer-Policy "no-referrer"
+ header @notOutingShare >Referrer-Policy "strict-origin-when-cross-origin"
+ header {
+  Strict-Transport-Security "max-age=31536000"
+  -Server
+ }
+ reverse_proxy api:3000 {
+  header_up X-Real-IP {remote_host}
+  header_up -X-Ops-Token
+ }
+}
+{$DOMAIN} {
+ import kulture_public
+}
+https:// {
+ tls {
+  on_demand
+ }
+ import kulture_public
+}
