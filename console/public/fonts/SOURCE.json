@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/vercel/geist-font",
+  "commit": "10dc7658f13c38a474cde201bb09a4617267545b",
+  "license": "SIL Open Font License 1.1",
+  "files": [
+    "fonts/Geist/ttf/Geist-Regular.ttf",
+    "fonts/Geist/ttf/Geist-Medium.ttf",
+    "fonts/Geist/ttf/Geist-SemiBold.ttf",
+    "fonts/Geist/ttf/Geist-Bold.ttf",
+    "fonts/Geist/ttf/Geist-Light.ttf",
+    "fonts/GeistMono/ttf/GeistMono-Regular.ttf",
+    "fonts/GeistMono/ttf/GeistMono-Medium.ttf",
+    "OFL.txt"
+  ]
+}

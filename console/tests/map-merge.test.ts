@@ -1,0 +1,5 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {mergeDocument} from '../src/maps/merge.ts';
+test('map merge preserves independent edits and stable added nodes',()=>{const b={name:'A',nodes:[{id:'one',label:'Entry'}]},l={name:'Local name',nodes:[{id:'one',label:'Entry'},{id:'two',label:'Lift'}]},r={name:'A',nodes:[{id:'one',label:'Main door'}]};const result=mergeDocument(b,l,r);assert.deepEqual(result.conflicts,[]);assert.deepEqual(result.value,{name:'Local name',nodes:[{id:'one',label:'Main door'},{id:'two',label:'Lift'}]});});
+test('delete versus edit and direction conflicts require explicit choices',()=>{const b={nodes:[{id:'one',label:'Entry'}],edges:['a','b']},l={nodes:[],edges:['b','a']},r={nodes:[{id:'one',label:'Main door'}],edges:['a','c']};const conflict=mergeDocument(b,l,r);assert.deepEqual(conflict.conflicts.map(c=>c.path),['/nodes/one','/edges']);const done=mergeDocument(b,l,r,{'/nodes/one':'remote','/edges':'local'});assert.equal(done.conflicts.length,0);assert.deepEqual(done.value,l.nodes.length?l:{nodes:r.nodes,edges:l.edges});});

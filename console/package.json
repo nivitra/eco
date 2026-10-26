@@ -1,0 +1,27 @@
+{
+  "name": "@kulture/business-console",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "check": "tsc -b --pretty false",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:browser": "node tests/merchant-flow.browser.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.48.0",
+    "mapbox-gl": "3.32.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "8.3.1"
+  }
+}
